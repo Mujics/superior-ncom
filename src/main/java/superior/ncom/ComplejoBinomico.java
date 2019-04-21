@@ -8,14 +8,6 @@ public class ComplejoBinomico extends Complejo implements Mostrable {
         super(parteReal, parteImaginaria);
     }
 
-    public Double calcularModulo() {
-        return Math.hypot(parteReal, parteImaginaria);
-    }
-
-    public double calcularArgumento() {
-        return Math.atan2(parteReal, parteImaginaria);
-    }
-
     @Override public String mostrar() {
         DecimalFormat df = new DecimalFormat("###.#");
         String signo = " + ";

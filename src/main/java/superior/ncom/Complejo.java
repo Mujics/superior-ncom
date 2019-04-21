@@ -12,4 +12,12 @@ public class Complejo {
     public Complejo transformarAConjugado() {
         return new ComplejoConjugado(parteReal, parteImaginaria);
     }
+
+    public Double calcularModulo() {
+        return  Math.floor(Math.hypot(parteReal, parteImaginaria) * 100) / 100;
+    }
+
+    public double calcularArgumento() {
+        return Math.floor(Math.atan2(parteReal, parteImaginaria) * 100) / 100;
+    }
 }

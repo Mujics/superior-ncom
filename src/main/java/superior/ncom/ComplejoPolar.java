@@ -6,10 +6,7 @@ public class ComplejoPolar extends Complejo implements Mostrable{
     }
 
     @Override public String mostrar() {
-        double sumaCuadrados = Math.pow(parteReal,2) + Math.pow(parteImaginaria,2);
-        double r = Math.sqrt(sumaCuadrados);
-        double phi = Math.atan(parteImaginaria / parteReal);
-        return "[ " + r + " ; " + phi + "π ]";
+        return "[ " + calcularModulo() + " ; " + calcularArgumento() + "π ]";
     }
 
     public ComplejoBinomico transformarABinomico() {

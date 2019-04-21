@@ -26,7 +26,7 @@ public class ComplejoTests {
     public void transformar_binomico_a_polar_y_mostrar() {
         ComplejoBinomico complejoBinomico = new ComplejoBinomico(4.0,4.0);
         Mostrable complejoPolar = complejoBinomico.transformarAPolar();
-        Assert.assertEquals("[ 5 ; 0.7853981633974483π ]", complejoPolar.mostrar());
+        Assert.assertEquals("[ 5.65 ; 0.78π ]", complejoPolar.mostrar());
     }
 
     @Test
