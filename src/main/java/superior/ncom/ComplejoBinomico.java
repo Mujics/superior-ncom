@@ -9,15 +9,24 @@ public class ComplejoBinomico extends Complejo implements Mostrable {
     }
 
     @Override public String mostrar() {
-        DecimalFormat df = new DecimalFormat("###.#");
-        String signo = " + ";
-        if (parteImaginaria < 0) {
-            signo = " - ";
-        }
-        return df.format(parteReal) + signo + df.format(Math.abs(parteImaginaria)) + "j";
+        return getParteRealMostrable() + getParteImaginariaMostrable();
     }
 
     public ComplejoPolar transformarAPolar() {
         return new ComplejoPolar(this.parteReal, this.parteImaginaria);
+    }
+
+    private String getParteRealMostrable() {
+        DecimalFormat df = new DecimalFormat("###.#");
+        return df.format(this.parteReal);
+    }
+
+    private String getParteImaginariaMostrable() {
+        String signo = " + ";
+        if (parteImaginaria < 0) {
+            signo = " - ";
+        }
+        DecimalFormat df = new DecimalFormat("###.#");
+        return signo + df.format(Math.abs(this.parteImaginaria)) + "j";
     }
 }
