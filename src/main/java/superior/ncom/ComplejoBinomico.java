@@ -13,7 +13,7 @@ public class ComplejoBinomico extends Complejo implements Mostrable {
     }
 
     public double calcularArgumento() {
-        return Math.atan(parteReal / parteImaginaria);
+        return Math.atan2(parteReal, parteImaginaria);
     }
 
     @Override public String mostrar() {
