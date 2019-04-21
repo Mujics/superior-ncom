@@ -1,6 +1,6 @@
 package superior.ncom;
 
-public class Complejo {
+public abstract class Complejo {
     protected Double parteReal;
     protected Double parteImaginaria;
 
