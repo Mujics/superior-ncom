@@ -11,6 +11,24 @@ public class ComplejoTests {
     }
 
     @Test
+    public void calcular_modulo_de_un_complejo_en_forma_binomica_caso_2() {
+        ComplejoBinomico complejoBinomico = new ComplejoBinomico(3.0,5.0);
+        Assert.assertEquals(Math.sqrt(34), complejoBinomico.calcularModulo(), 0.1);
+    }
+
+    @Test
+    public void calcular_modulo_de_un_complejo_en_forma_binomica_caso_3() {
+        ComplejoBinomico complejoBinomico = new ComplejoBinomico(1.0/3.0,-1.0/3.0);
+        Assert.assertEquals(Math.sqrt(2)/3.0, complejoBinomico.calcularModulo(), 0.1);
+    }
+
+    @Test
+    public void calcular_modulo_de_un_complejo_en_forma_binomica_caso_4() {
+        ComplejoBinomico complejoBinomico = new ComplejoBinomico(-Math.sqrt(2),Math.sqrt(2));
+        Assert.assertEquals(2, complejoBinomico.calcularModulo(), 0.1);
+    }
+
+    @Test
     public void mostrar_numero_complejo_en_forma_binomica() {
         Mostrable complejoEnFormaBinomica = new ComplejoBinomico(4.0,4.0);
         Assert.assertEquals(complejoEnFormaBinomica.mostrar(), "4 + 4j");
@@ -20,6 +38,30 @@ public class ComplejoTests {
     public void calcular_argumento_de_un_complejo_en_forma_binomica() {
         ComplejoBinomico complejoBinomico = new ComplejoBinomico(4.0,4.0);
         Assert.assertEquals(0.78, complejoBinomico.calcularArgumento(), 0.1);
+    }
+
+    @Test
+    public void calcular_argumento_de_un_complejo_en_forma_binomica_caso_2() {
+        ComplejoBinomico complejoBinomico = new ComplejoBinomico(3.0,5.0);
+        Assert.assertEquals(1.03, complejoBinomico.calcularArgumento(), 0.0001);
+    }
+
+    @Test
+    public void calcular_argumento_de_un_complejo_en_forma_binomica_caso_3() {
+        ComplejoBinomico complejoBinomico = new ComplejoBinomico(1.0/3.0,-1.0/3.0);
+        Assert.assertEquals(-0.78539816+Math.PI, complejoBinomico.calcularArgumento(), 0.1);
+    }
+
+    @Test
+    public void calcular_argumento_de_un_complejo_en_forma_binomica_caso_4() {
+        ComplejoBinomico complejoBinomico = new ComplejoBinomico(-Math.sqrt(2),Math.sqrt(2));
+        Assert.assertEquals(-0.78539816+Math.PI, complejoBinomico.calcularArgumento(), 0.1);
+    }
+
+    @Test
+    public void calcular_argumento_de_un_complejo_en_forma_binomica_caso_5() {
+        ComplejoBinomico complejoBinomico = new ComplejoBinomico(-Math.sqrt(2),-Math.sqrt(2));
+        Assert.assertEquals(0.78539816, complejoBinomico.calcularArgumento(), 0.1);
     }
 
     @Test

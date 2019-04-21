@@ -6,7 +6,7 @@ public class ComplejoPolar extends Complejo implements Mostrable{
     }
 
     @Override public String mostrar() {
-        return "[ " + calcularModulo() + " ; " + calcularArgumento() + "π ]";
+        return "[ " + calcularModulo() + " ; " + calcularArgumentoMostrable() + " ]";
     }
 
     public ComplejoBinomico transformarABinomico() {
