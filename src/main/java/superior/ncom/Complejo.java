@@ -28,7 +28,4 @@ public abstract class Complejo {
         return Math.floor(argumento * 100) / 100;
     }
 
-    public String calcularArgumentoMostrable() {
-        return String.valueOf(calcularArgumento() + "π");
-    }
 }

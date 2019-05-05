@@ -13,7 +13,7 @@ public class ComplejoBinomico extends Complejo implements Mostrable {
     }
 
     public ComplejoPolar transformarAPolar() {
-        return new ComplejoPolar(this.parteReal, this.parteImaginaria);
+        return new ComplejoPolar(calcularModulo(), calcularArgumento());
     }
 
     private String getParteRealMostrable() {

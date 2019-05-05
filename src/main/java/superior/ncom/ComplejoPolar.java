@@ -6,10 +6,10 @@ public class ComplejoPolar extends Complejo implements Mostrable{
     }
 
     @Override public String mostrar() {
-        return "[ " + calcularModulo() + " ; " + calcularArgumentoMostrable() + " ]";
+        return "[ " + parteReal + " ; " + parteImaginaria + "π ]";
     }
 
     public ComplejoBinomico transformarABinomico() {
-        return new ComplejoBinomico(parteReal, parteImaginaria);
+        return new ComplejoBinomico(parteReal * Math.cos(parteImaginaria), parteReal * Math.sin(parteImaginaria));
     }
 }
