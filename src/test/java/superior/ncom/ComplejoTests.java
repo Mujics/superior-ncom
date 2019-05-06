@@ -73,9 +73,9 @@ public class ComplejoTests {
 
     @Test
     public void transformar_polar_a_binomico_y_mostrar() {
-        ComplejoPolar complejoPolar = new ComplejoPolar(4.0,4.0);
+        ComplejoPolar complejoPolar = new ComplejoPolar(Math.sqrt(2),Math.PI / 4);
         Mostrable complejoBinomico = complejoPolar.transformarABinomico();
-        Assert.assertEquals("4 + 4j", complejoBinomico.mostrar());
+        Assert.assertEquals("1 + 1j", complejoBinomico.mostrar());
     }
 
     @Test

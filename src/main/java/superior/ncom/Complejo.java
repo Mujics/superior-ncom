@@ -1,6 +1,9 @@
 package superior.ncom;
 
+import jdk.nashorn.internal.objects.annotations.Getter;
+
 public abstract class Complejo {
+
     protected Double parteReal;
     protected Double parteImaginaria;
 
@@ -26,6 +29,14 @@ public abstract class Complejo {
         }
 
         return Math.floor(argumento * 100) / 100;
+    }
+
+    public Double getParteReal() {
+        return parteReal;
+    }
+
+    public Double getParteImaginaria() {
+        return parteImaginaria;
     }
 
     public String calcularArgumentoMostrable() {
