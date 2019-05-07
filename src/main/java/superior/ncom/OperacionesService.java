@@ -27,7 +27,7 @@ public class OperacionesService {
 //		return new ComplejoBinomico( parteReal, parteImaginaria );
 //	}
 
-	public ComplejoBinomico division(Complejo primero, Complejo segundo){
+	public ComplejoBinomico division(ComplejoBinomico primero, ComplejoBinomico segundo){
 		Complejo conjugadoSegundo = segundo.transformarAConjugado();
 		Complejo numerador = multiplicacion(primero, conjugadoSegundo);
 		double denominador = multiplicacion(segundo, conjugadoSegundo).getParteReal();

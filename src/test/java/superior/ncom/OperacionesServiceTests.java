@@ -37,7 +37,7 @@ public class OperacionesServiceTests {
 	public void multiplicacionDeComplejosCaso2() {
 		ComplejoPolar primero = new ComplejoPolar(2,Math.PI / 3);
 		ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
-		Complejo resutlado = new OperacionesService().multiplicacion(primero, segundo);
+		ComplejoBinomico resutlado = new OperacionesService().multiplicacion(primero, segundo);
 //		ComplejoPolar resultadoPolar = restulado.transformarAPolar();
 		Assert.assertEquals(Math.PI * 8/15, resutlado.calcularArgumento(), 0);
 		Assert.assertEquals(10, resutlado.calcularModulo(), 0);

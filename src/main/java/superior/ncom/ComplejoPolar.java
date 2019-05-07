@@ -1,30 +1,30 @@
 package superior.ncom;
 
 public class ComplejoPolar extends Complejo implements Mostrable{
+
+	private Double modulo;
+	private Double argumento;
+
     public ComplejoPolar(double modulo, double argumento) {
-        super(modulo * Math.cos(argumento), modulo * Math.sin(argumento));
+		this.modulo = modulo;
+		this.argumento = argumento;
     }
 
     @Override public String mostrar() {
-        return "[ " + calcularModulo() + " ; " + calcularArgumentoMostrable() + " ]";
+        return "[ " + modulo + " ; " + argumento + "π ]";
     }
 
     public ComplejoBinomico transformarABinomico() {
-        return new ComplejoBinomico(
-                parteReal * Math.cos(parteImaginaria),
-                parteReal * Math.sin(parteImaginaria)
-        );
+        return new ComplejoBinomico(modulo * Math.cos(argumento), modulo * Math.sin(argumento));
     }
 
 	@Override
-	public Double getParteImaginaria() {
-//		return parteReal * Math.cos(parteImaginaria);
-		return calcularArgumento();
+	public double getParteReal() {
+		return modulo * Math.cos(argumento);
 	}
 
 	@Override
-	public Double getParteReal() {
-//		return parteReal * Math.cos(parteImaginaria);
-		return calcularModulo();
+	public double getParteImaginaria() {
+		return modulo * Math.sin(argumento);
 	}
 }

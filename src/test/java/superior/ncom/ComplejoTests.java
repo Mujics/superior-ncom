@@ -73,15 +73,15 @@ public class ComplejoTests {
 
     @Test
     public void transformar_polar_a_binomico_y_mostrar() {
-        ComplejoPolar complejoPolar = new ComplejoPolar(Math.sqrt(2),Math.PI / 4);
+        ComplejoPolar complejoPolar = new ComplejoPolar(Math.sqrt(2), Math.PI / 4);
         Mostrable complejoBinomico = complejoPolar.transformarABinomico();
         Assert.assertEquals("1 + 1j", complejoBinomico.mostrar());
     }
 
     @Test
     public void transformar_a_conjugado_y_mostrar() {
-        ComplejoPolar complejoPolar = new ComplejoPolar(4.0,4.0);
-        Mostrable complejo = (Mostrable) complejoPolar.transformarAConjugado();
+        ComplejoBinomico complejoBinomico = new ComplejoBinomico(4.0,4.0);
+        Mostrable complejo = (Mostrable) complejoBinomico.transformarAConjugado();
         Assert.assertEquals("4 - 4j", complejo.mostrar());
     }
 }
