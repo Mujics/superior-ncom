@@ -2,6 +2,17 @@ package superior.ncom;
 
 public class OperacionesService {
 
+	public Double potencia;
+	public Double raiz;
+	public Double i;
+	public Double k;
+	
+	public class RaizN {
+	    public Double calcular(Double base, Double n) {
+	        return Math.pow(Math.E, Math.log(base)/n);
+	    }
+	}
+	
 	public ComplejoBinomico suma(Complejo primero, Complejo segundo){
 		double parteReal = primero.getParteReal() + segundo.getParteReal();
 		double parteImaginaria = primero.getParteImaginaria() + segundo.getParteImaginaria();
@@ -33,4 +44,20 @@ public class OperacionesService {
 		double denominador = multiplicacion(segundo, conjugadoSegundo).getParteReal();
 		return new ComplejoBinomico(numerador.getParteReal() / denominador, numerador.getParteImaginaria() / denominador);
 	}
+	
+	public ComplejoBinomico potencia(Complejo primero, Double potencia) {
+		double parteReal = Math.pow(primero.getParteReal(), potencia);
+		double parteImaginaria = primero.getParteImaginaria() * potencia;
+		return new ComplejoBinomico (parteReal, parteImaginaria);
+	}
+	/*
+	public ComplejoBinomico raizNesima (Complejo primero, Double raiz) {
+		double parteReal = RaizN.calcular(primero.getParteReal(),raiz);
+		double parteImaginaria = primero.getParteImaginaria() + (2*0*Math.PI)/raiz ;
+		for(k=0.00; k<=raiz; k++) {
+			System.out.println("las Partes imaginarias son" + (primero.getParteImaginaria()+ (2*k*Math.PI)/raiz));
+		}
+		return new ComplejoBinomico(parteReal, parteImaginaria);
+	}
+	*/	
 }
