@@ -7,11 +7,9 @@ public class OperacionesService {
 	public Double i;
 	public Double k;
 	
-	public class RaizN {
-	    public Double calcular(Double base, Double n) {
-	        return Math.pow(Math.E, Math.log(base)/n);
+	public Double calcular(Double base, Double n) {
+	    return Math.pow(Math.E, Math.log(base)/n);
 	    }
-	}
 	
 	public ComplejoBinomico suma(Complejo primero, Complejo segundo){
 		double parteReal = primero.getParteReal() + segundo.getParteReal();
@@ -50,14 +48,14 @@ public class OperacionesService {
 		double parteImaginaria = primero.getParteImaginaria() * potencia;
 		return new ComplejoBinomico (parteReal, parteImaginaria);
 	}
-	/*
+
 	public ComplejoBinomico raizNesima (Complejo primero, Double raiz) {
-		double parteReal = RaizN.calcular(primero.getParteReal(),raiz);
+		double parteReal = calcular(primero.getParteReal(),raiz);
 		double parteImaginaria = primero.getParteImaginaria() + (2*0*Math.PI)/raiz ;
-		for(k=0.00; k<=raiz; k++) {
+		for(k=0.00; k<raiz; k++) {
 			System.out.println("las Partes imaginarias son" + (primero.getParteImaginaria()+ (2*k*Math.PI)/raiz));
 		}
 		return new ComplejoBinomico(parteReal, parteImaginaria);
 	}
-	*/	
+
 }

@@ -51,6 +51,7 @@ public class OperacionesServiceTests {
 		Assert.assertEquals(0.55, resultado.getParteImaginaria(), 0.1);
 		Assert.assertEquals(0.26, resultado.getParteReal(), 0.1);
 	}
+	
 	@Test
 	public void potenciaDeComplejos() {
 		ComplejoBinomico primero = new ComplejoBinomico(3D,4D);
@@ -59,5 +60,11 @@ public class OperacionesServiceTests {
 		Assert.assertEquals(8, resultado.getParteImaginaria(), 0);
 	}
 	
-	
+	@Test
+	public void raizDeComplejos() {
+		ComplejoBinomico primero = new ComplejoBinomico(4D,1D);
+		ComplejoBinomico resultado = new OperacionesService().raizNesima(primero, 2D);
+		Assert.assertEquals(2, resultado.getParteReal(), 0.1);
+		Assert.assertEquals(1, resultado.getParteImaginaria(), 0.1);
+	}
 }
