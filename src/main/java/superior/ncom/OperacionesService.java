@@ -43,10 +43,12 @@ public class OperacionesService {
 		return new ComplejoBinomico(numerador.getParteReal() / denominador, numerador.getParteImaginaria() / denominador);
 	}
 	
-	public ComplejoBinomico potencia(Complejo primero, Double potencia) {
-		double parteReal = Math.pow(primero.getParteReal(), potencia);
-		double parteImaginaria = primero.getParteImaginaria() * potencia;
-		return new ComplejoBinomico (parteReal, parteImaginaria);
+	public ComplejoBinomico potencia(Complejo primero, Integer potencia) {
+		ComplejoBinomico binomico = new ComplejoBinomico(primero.getParteReal(), primero.getParteReal());
+		double modulo = Math.pow(binomico.calcularModulo(), potencia);
+		double argumento = binomico.calcularArgumento() * potencia;
+		ComplejoPolar polar = new ComplejoPolar(modulo, argumento);
+		return polar.transformarABinomico();
 	}
 
 	public ComplejoBinomico raizNesima (Complejo primero, Double raiz) {

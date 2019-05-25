@@ -18,7 +18,7 @@ public class ComplejoBinomico extends Complejo implements Mostrable {
     }
 
     public Double calcularModulo() {
-        return Math.floor(Math.hypot(parteReal, parteImaginaria) * 100) / 100;
+        return Math.hypot(parteReal, parteImaginaria);
     }
 
     public Double calcularArgumento() {

@@ -51,13 +51,21 @@ public class OperacionesServiceTests {
 		Assert.assertEquals(0.55, resultado.getParteImaginaria(), 0.1);
 		Assert.assertEquals(0.26, resultado.getParteReal(), 0.1);
 	}
-	
+
 	@Test
-	public void potenciaDeComplejos() {
-		ComplejoBinomico primero = new ComplejoBinomico(3D,4D);
-		ComplejoBinomico resultado = new OperacionesService().potencia(primero, 2D);
-		Assert.assertEquals(9, resultado.getParteReal(), 0);
-		Assert.assertEquals(8, resultado.getParteImaginaria(), 0);
+	public void potenciaDeComplejos1() {
+		ComplejoBinomico primero = new ComplejoBinomico(2D,2D);
+		ComplejoBinomico resultado = new OperacionesService().potencia(primero, 2);
+		Assert.assertEquals(0, resultado.getParteReal(), 0.1);
+		Assert.assertEquals(8, resultado.getParteImaginaria(), 0.1);
+	}
+
+	@Test
+	public void potenciaDeComplejos2() {
+		ComplejoBinomico primero = new ComplejoBinomico(2D,2D);
+		ComplejoBinomico resultado = new OperacionesService().potencia(primero, 4);
+		Assert.assertEquals(-64, resultado.getParteReal(), -0.1);
+		Assert.assertEquals(0, resultado.getParteImaginaria(), 0);
 	}
 	
 	@Test

@@ -11,7 +11,7 @@ public class ComplejoPolar extends Complejo implements Mostrable{
     }
 
     @Override public String mostrar() {
-        return "[ " + modulo + " ; " + argumento + "π ]";
+        return "[ " + modulo + " ; " + argumento + " ]";
     }
 
     public ComplejoBinomico transformarABinomico() {
@@ -26,5 +26,13 @@ public class ComplejoPolar extends Complejo implements Mostrable{
 	@Override
 	public double getParteImaginaria() {
 		return modulo * Math.sin(argumento);
+	}
+
+	public Double getModulo(){
+		return modulo;
+	}
+
+	public Double getArgumento(){
+		return argumento;
 	}
 }
