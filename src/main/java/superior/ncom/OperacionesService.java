@@ -1,15 +1,6 @@
 package superior.ncom;
 
 public class OperacionesService {
-
-	public Double potencia;
-	public Double raiz;
-	public Double i;
-	public Double k;
-	
-	public Double calcular(Double base, Double n) {
-	    return Math.pow(Math.E, Math.log(base)/n);
-	    }
 	
 	public ComplejoBinomico suma(Complejo primero, Complejo segundo){
 		double parteReal = primero.getParteReal() + segundo.getParteReal();
@@ -29,13 +20,6 @@ public class OperacionesService {
 		return new ComplejoBinomico( parteReal, parteImaginaria );
 	}
 
-//	public Complejo division(Complejo primero, Complejo segundo){
-//		double denominador = Math.pow(segundo.getParteReal(),2) + Math.pow(segundo.getParteImaginaria(),2);
-//		double parteReal = (primero.getParteReal() * segundo.getParteReal() + primero.getParteImaginaria() * segundo.getParteImaginaria())/ denominador;
-//		double parteImaginaria = (segundo.getParteReal() * primero.getParteImaginaria() - primero.getParteReal()* segundo.getParteImaginaria())/ denominador;
-//		return new ComplejoBinomico( parteReal, parteImaginaria );
-//	}
-
 	public ComplejoBinomico division(ComplejoBinomico primero, ComplejoBinomico segundo){
 		Complejo conjugadoSegundo = segundo.transformarAConjugado();
 		Complejo numerador = multiplicacion(primero, conjugadoSegundo);
@@ -44,17 +28,17 @@ public class OperacionesService {
 	}
 	
 	public ComplejoBinomico potencia(Complejo primero, Integer potencia) {
-		ComplejoBinomico binomico = new ComplejoBinomico(primero.getParteReal(), primero.getParteReal());
-		double modulo = Math.pow(binomico.calcularModulo(), potencia);
-		double argumento = binomico.calcularArgumento() * potencia;
-		ComplejoPolar polar = new ComplejoPolar(modulo, argumento);
-		return polar.transformarABinomico();
+        ComplejoBinomico complejoBinomico = multiplicacion(primero, primero);
+	    for (int i = 1; i < potencia - 1; i++) {
+	        complejoBinomico = multiplicacion(complejoBinomico, primero);
+        }
+        return complejoBinomico;
 	}
 
 	public ComplejoBinomico raizNesima (Complejo primero, Double raiz) {
-		double parteReal = calcular(primero.getParteReal(),raiz);
+		double parteReal = Math.pow(Math.E, Math.log(primero.getParteReal())/raiz);
 		double parteImaginaria = primero.getParteImaginaria() + (2*0*Math.PI)/raiz ;
-		for(k=0.00; k<raiz; k++) {
+		for(Double k=0.00; k<raiz; k++) {
 			System.out.println("las Partes imaginarias son" + (primero.getParteImaginaria()+ (2*k*Math.PI)/raiz));
 		}
 		return new ComplejoBinomico(parteReal, parteImaginaria);

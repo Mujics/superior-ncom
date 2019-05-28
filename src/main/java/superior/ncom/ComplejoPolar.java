@@ -6,12 +6,12 @@ public class ComplejoPolar extends Complejo implements Mostrable{
 	private Double argumento;
 
     public ComplejoPolar(double modulo, double argumento) {
-		this.modulo = modulo;
-		this.argumento = argumento;
+		this.modulo = Math.floor(modulo * 100) / 100;
+		this.argumento = Math.floor(argumento * 100) / 100;
     }
 
     @Override public String mostrar() {
-        return "[ " + modulo + " ; " + argumento + " ]";
+        return "[ " + modulo + " ; " + argumento + "π ]";
     }
 
     public ComplejoBinomico transformarABinomico() {

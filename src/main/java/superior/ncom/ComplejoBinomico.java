@@ -32,10 +32,6 @@ public class ComplejoBinomico extends Complejo implements Mostrable {
         return Math.floor(argumento * 100) / 100;
     }
 
-//    public ComplejoBinomico(Double parteReal, Double parteImaginaria) {
-//        super(parteReal, parteImaginaria);
-//    }
-
     @Override public String mostrar() {
         return getParteRealMostrable() + getParteImaginariaMostrable();
     }

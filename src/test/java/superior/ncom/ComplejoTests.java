@@ -70,7 +70,7 @@ public class ComplejoTests {
         ComplejoPolar complejoPolar = complejoBinomico.transformarAPolar();
         Assert.assertEquals(5.65, complejoPolar.getModulo(), 0.1);
         Assert.assertEquals(0.78, complejoPolar.getArgumento(), 0.1);
-        //Assert.assertEquals("[ 5.65 ; 0.78π ]", complejoPolar.mostrar());
+        Assert.assertEquals("[ 5.65 ; 0.78π ]", complejoPolar.mostrar());
     }
 
     @Test
