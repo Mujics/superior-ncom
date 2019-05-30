@@ -75,42 +75,32 @@ public class ComplejoBinomico implements Mostrable {
         ComplejoPolar thisPolar = this.transformarAPolar();
         ComplejoPolar otherPolar = complejoBinomico.transformarAPolar();
         thisPolar.multiplica(otherPolar);
-        ComplejoBinomico thisBinomico = thisPolar.transformarABinomico();
-        parteReal = thisBinomico.parteReal;
-        parteImaginaria = thisBinomico.parteImaginaria;
+        cloneComplejo(thisPolar);
     }
 
     public void multiplica(ComplejoPolar complejoPolar) {
         ComplejoPolar thisPolar = this.transformarAPolar();
         thisPolar.multiplica(complejoPolar);
-        ComplejoBinomico thisBinomico = thisPolar.transformarABinomico();
-        parteReal = thisBinomico.parteReal;
-        parteImaginaria = thisBinomico.parteImaginaria;
+        cloneComplejo(thisPolar);
     }
 
     public void dividi(ComplejoBinomico complejoBinomico) {
         ComplejoPolar thisPolar = this.transformarAPolar();
         ComplejoPolar otherPolar = complejoBinomico.transformarAPolar();
         thisPolar.dividi(otherPolar);
-        ComplejoBinomico thisBinomico = thisPolar.transformarABinomico();
-        parteReal = thisBinomico.parteReal;
-        parteImaginaria = thisBinomico.parteImaginaria;
+        cloneComplejo(thisPolar);
     }
 
     public void dividi(ComplejoPolar complejoPolar) {
         ComplejoPolar thisPolar = this.transformarAPolar();
         thisPolar.dividi(complejoPolar);
-        ComplejoBinomico thisBinomico = thisPolar.transformarABinomico();
-        parteReal = thisBinomico.parteReal;
-        parteImaginaria = thisBinomico.parteImaginaria;
+        cloneComplejo(thisPolar);
     }
 
     public void potencia(Integer potencia) {
         ComplejoPolar thisPolar = this.transformarAPolar();
         thisPolar.potencia(potencia);
-        ComplejoBinomico thisBinomico = thisPolar.transformarABinomico();
-        parteReal = thisBinomico.parteReal;
-        parteImaginaria = thisBinomico.parteImaginaria;
+        cloneComplejo(thisPolar);
     }
 
     public void raizNesima(Double raiz) {
@@ -119,5 +109,11 @@ public class ComplejoBinomico implements Mostrable {
         for(Double k=0.00; k<raiz; k++) {
             System.out.println("las Partes imaginarias son" + (parteImaginaria + (2*k*Math.PI)/raiz));
         }
+    }
+
+    private void cloneComplejo(ComplejoPolar complejoPolar) {
+        ComplejoBinomico complejoBinomico = complejoPolar.transformarABinomico();
+        this.parteReal = complejoBinomico.parteReal;
+        this.parteImaginaria = complejoBinomico.parteImaginaria;
     }
 }

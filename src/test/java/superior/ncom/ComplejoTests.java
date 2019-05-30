@@ -44,7 +44,7 @@ public class ComplejoTests {
     public void sumaDeComplejosCaso2() {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
         ComplejoBinomico primeroCopia = new ComplejoBinomico(2D,3D);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.suma(segundo);
         segundo.suma(primeroCopia);
         Assert.assertEquals(primero.mostrar(), "6 + 5.9j");
@@ -54,8 +54,8 @@ public class ComplejoTests {
 
     @Test
     public void sumaDeComplejosCaso3() {
-        ComplejoPolar primero = new ComplejoPolar(8,Math.PI / 5);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar primero = new ComplejoPolar(8D,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.suma(segundo);
         Assert.assertEquals(primero.mostrar(), "[ 13 ; 0.63π ]");
     }
@@ -71,7 +71,7 @@ public class ComplejoTests {
     @Test
     public void restaDeComplejosCaso2() {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.resta(segundo);
         Assert.assertEquals(primero.mostrar(), "-2 + 0.1j");
     }
@@ -79,15 +79,15 @@ public class ComplejoTests {
     @Test
     public void restaDeComplejosCaso3() {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         segundo.resta(primero);
         Assert.assertEquals(segundo.mostrar(), "[ 2.05 ; -0.03π ]");
     }
 
     @Test
     public void restaDeComplejosCaso4() {
-        ComplejoPolar primero = new ComplejoPolar(5,Math.PI / 5);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar primero = new ComplejoPolar(5D,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         segundo.resta(primero);
         Assert.assertEquals(segundo.mostrar(), "[ 0 ; 0π ]");
     }
@@ -102,8 +102,8 @@ public class ComplejoTests {
 
     @Test
     public void multiplicacionDeComplejosCaso2() {
-        ComplejoPolar primero = new ComplejoPolar(2,Math.PI / 3);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar primero = new ComplejoPolar(2D,Math.PI / 3);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.multiplica(segundo);
         Assert.assertEquals(primero.mostrar(), "[ 10 ; 1.68π ]");
     }
@@ -119,7 +119,7 @@ public class ComplejoTests {
     @Test
     public void multiplicacionDeComplejosCaso4() {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.multiplica(segundo);
         Assert.assertEquals(primero.mostrar(), "-0.7 + 18j");
     }
@@ -127,7 +127,7 @@ public class ComplejoTests {
     @Test
     public void multiplicacionDeComplejosCaso5() {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         segundo.multiplica(primero);
         Assert.assertEquals(segundo.mostrar(), "[ 18.03 ; 1.61π ]");
         Assert.assertEquals(segundo.transformarABinomico().mostrar(), "-0.7 + 18j");
@@ -138,23 +138,23 @@ public class ComplejoTests {
         ComplejoBinomico primero = new ComplejoBinomico(3D,2D);
         ComplejoBinomico segundo = new ComplejoBinomico(5D,-3D);
         primero.dividi(segundo);
-        Assert.assertEquals(primero.mostrar(), "9 + 19j");
+        Assert.assertEquals(primero.mostrar(), "0.3 + 0.6j");
     }
 
     @Test
     public void divisionDeComplejosCaso2() {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.dividi(segundo);
-        Assert.assertEquals(primero.mostrar(), "16.9 + 6.3j");
+        Assert.assertEquals(primero.mostrar(), "0.7 + 0.3j");
     }
 
     @Test
     public void divisionDeComplejosCaso3() {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
-        ComplejoPolar segundo = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         segundo.dividi(primero);
-        Assert.assertEquals(segundo.mostrar(), "[ 18.03 ; -0.35π ]");
+        Assert.assertEquals(segundo.mostrar(), "[ 1.39 ; -0.35π ]");
     }
 
     @Test
@@ -180,7 +180,7 @@ public class ComplejoTests {
 
     @Test
     public void raizDeComplejosCaso2() {
-        ComplejoPolar primero = new ComplejoPolar(5,Math.PI / 5);
+        ComplejoPolar primero = new ComplejoPolar(5D,Math.PI / 5);
         primero.raizNesima(2D);
         Assert.assertEquals(primero.mostrar(), "[ 3.57 ; 0.97π ]");
     }

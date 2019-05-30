@@ -7,7 +7,7 @@ public class ComplejoPolar implements Mostrable{
 	private Double modulo;
 	private Double argumento;
 
-    public ComplejoPolar(double modulo, double argumento) {
+    public ComplejoPolar(Double modulo, Double argumento) {
 		this.modulo = modulo;
 		this.argumento = argumento;
     }
@@ -34,30 +34,26 @@ public class ComplejoPolar implements Mostrable{
         ComplejoBinomico thisBinomico = this.transformarABinomico();
         ComplejoBinomico otherComplejo = complejoPolar.transformarABinomico();
         thisBinomico.suma(otherComplejo);
-        ComplejoPolar thisPolar = thisBinomico.transformarAPolar();
-        setParameters(thisPolar.modulo, thisPolar.argumento);
+        cloneComplejo(thisBinomico);
     }
 
     public void suma(ComplejoBinomico complejoBinomico) {
         ComplejoBinomico thisBinomico = this.transformarABinomico();
         thisBinomico.suma(complejoBinomico);
-        ComplejoPolar complejoPolar = thisBinomico.transformarAPolar();
-        setParameters(complejoPolar.modulo, complejoPolar.argumento);
+        cloneComplejo(thisBinomico);
     }
 
     public void resta(ComplejoPolar complejoPolar) {
         ComplejoBinomico thisBinomico = this.transformarABinomico();
         ComplejoBinomico otherComplejo = complejoPolar.transformarABinomico();
         thisBinomico.resta(otherComplejo);
-        ComplejoPolar thisPolar = thisBinomico.transformarAPolar();
-        setParameters(thisPolar.modulo, thisPolar.argumento);
+        cloneComplejo(thisBinomico);
     }
 
     public void resta(ComplejoBinomico complejoBinomico) {
         ComplejoBinomico thisBinomico = this.transformarABinomico();
         thisBinomico.resta(complejoBinomico);
-        ComplejoPolar complejoPolar = thisBinomico.transformarAPolar();
-        setParameters(complejoPolar.modulo, complejoPolar.argumento);
+        cloneComplejo(thisBinomico);
     }
 
     public void multiplica(ComplejoPolar complejoPolar){
@@ -71,7 +67,7 @@ public class ComplejoPolar implements Mostrable{
     }
 
     public void dividi(ComplejoPolar complejoPolar){
-        modulo = this.modulo * complejoPolar.modulo;
+        modulo = this.modulo / complejoPolar.modulo;
         argumento = this.argumento - complejoPolar.argumento;
     }
 
@@ -88,13 +84,13 @@ public class ComplejoPolar implements Mostrable{
     public void raizNesima(Double raiz) {
         ComplejoBinomico complejoBinomico = this.transformarABinomico();
         complejoBinomico.raizNesima(raiz);
-        ComplejoPolar complejoPolar = complejoBinomico.transformarAPolar();
-        setParameters(complejoPolar.modulo, complejoPolar.argumento);
+        cloneComplejo(complejoBinomico);
     }
 
-    private void setParameters(Double modulo, Double argumento) {
-        this.argumento = argumento;
-        this.modulo = modulo;
+    private void cloneComplejo(ComplejoBinomico complejoBinomico) {
+        ComplejoPolar complejoPolar = complejoBinomico.transformarAPolar();
+        this.argumento = complejoPolar.argumento;
+        this.modulo = complejoPolar.modulo;
     }
 
     public FuncionTrigonometrica convertirEnFuncion(Double frecuencia) {
