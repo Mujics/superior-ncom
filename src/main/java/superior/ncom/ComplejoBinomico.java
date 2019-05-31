@@ -13,6 +13,11 @@ public class ComplejoBinomico implements Mostrable {
         this.parteImaginaria = parteImaginaria;
     }
 
+    public ComplejoBinomico(String parteReal, String parteImaginaria) {
+        this.parteReal = Double.parseDouble(parteReal);
+        this.parteImaginaria = Double.parseDouble(parteImaginaria);
+    }
+
     public void transformarAConjugado() {
         parteImaginaria = -parteImaginaria;
     }

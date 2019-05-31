@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <title>Calculadora</title>
     </head>
@@ -7,6 +7,21 @@
 
         <div class="container">
             <h1>Calculadora</h1>
+            <form method="get" action="/sumar">
+                <div>
+                    <label>Ingrese complejo</label>
+                    <input type="text" name="parteReal1" />
+                    <input type="text" name="parteImaginaria1" />
+                </div>
+
+                <div>
+                    <label>Ingrese otro complejo</label>
+                    <input type="text" name="parteReal2" />
+                    <input type="text" name="parteImaginaria2" />
+                </div>
+                <h1 th:text="${resultado}"></h1>
+                <button type="submit">sumar</button>
+            </form>
         </div>
     </body>
 </html>
