@@ -47,9 +47,9 @@ public class ComplejoTests {
         ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.suma(segundo);
         segundo.suma(primeroCopia);
-        Assert.assertEquals(primero.mostrar(), "6 + 5.9j");
+        Assert.assertEquals(primero.mostrar(), "6.05 + 5.94j");
         Assert.assertEquals(segundo.mostrar(), "[ 8.47 ; 0.78π ]");
-        Assert.assertEquals(segundo.transformarABinomico().mostrar(), "6 + 5.9j");
+        Assert.assertEquals(segundo.transformarABinomico().mostrar(), "6.05 + 5.94j");
     }
 
     @Test
@@ -73,7 +73,7 @@ public class ComplejoTests {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
         ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.resta(segundo);
-        Assert.assertEquals(primero.mostrar(), "-2 + 0.1j");
+        Assert.assertEquals(primero.mostrar(), "-2.05 + 0.06j");
     }
 
     @Test
@@ -121,7 +121,7 @@ public class ComplejoTests {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
         ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.multiplica(segundo);
-        Assert.assertEquals(primero.mostrar(), "-0.7 + 18j");
+        Assert.assertEquals(primero.mostrar(), "-0.73 + 18.01j");
     }
 
     @Test
@@ -130,7 +130,7 @@ public class ComplejoTests {
         ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         segundo.multiplica(primero);
         Assert.assertEquals(segundo.mostrar(), "[ 18.03 ; 1.61π ]");
-        Assert.assertEquals(segundo.transformarABinomico().mostrar(), "-0.7 + 18j");
+        Assert.assertEquals(segundo.transformarABinomico().mostrar(), "-0.73 + 18.01j");
     }
 
     @Test
@@ -138,7 +138,7 @@ public class ComplejoTests {
         ComplejoBinomico primero = new ComplejoBinomico(3D,2D);
         ComplejoBinomico segundo = new ComplejoBinomico(5D,-3D);
         primero.dividi(segundo);
-        Assert.assertEquals(primero.mostrar(), "0.3 + 0.6j");
+        Assert.assertEquals(primero.mostrar(), "0.26 + 0.56j");
     }
 
     @Test
@@ -146,7 +146,7 @@ public class ComplejoTests {
         ComplejoBinomico primero = new ComplejoBinomico(2D,3D);
         ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         primero.dividi(segundo);
-        Assert.assertEquals(primero.mostrar(), "0.7 + 0.3j");
+        Assert.assertEquals(primero.mostrar(), "0.68 + 0.25j");
     }
 
     @Test

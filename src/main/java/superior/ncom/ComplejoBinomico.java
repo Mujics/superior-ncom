@@ -23,7 +23,7 @@ public class ComplejoBinomico implements Mostrable {
     }
 
     @Override public String mostrar() {
-        return "(" + getParteRealMostrable() + getParteImaginariaMostrable() + ")";
+        return getParteRealMostrable() + getParteImaginariaMostrable();
     }
 
     public ComplejoPolar transformarAPolar() {
@@ -31,7 +31,7 @@ public class ComplejoBinomico implements Mostrable {
     }
 
     private String getParteRealMostrable() {
-        DecimalFormat df = new DecimalFormat("###.#");
+        DecimalFormat df = new DecimalFormat("###.##");
         String valueFormatted = df.format(this.parteReal);
         if (Objects.equals(valueFormatted, "0")) {
             return "";
@@ -48,7 +48,7 @@ public class ComplejoBinomico implements Mostrable {
         if (Objects.equals(getParteRealMostrable(), "")) {
             signo = "";
         }
-        DecimalFormat df = new DecimalFormat("###.#");
+        DecimalFormat df = new DecimalFormat("###.##");
         String parteImaginariaFormatted =  df.format(Math.abs(this.parteImaginaria));
         if (!Objects.equals(parteImaginariaFormatted, "0")) {
             return signo + parteImaginariaFormatted + "j";

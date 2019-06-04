@@ -8,23 +8,33 @@
         <h1>Calculadora de binomicos</h1>
         <form method="post" action="/ejecutar">
             <div>
-                <input type="text" name="primeraParte1" th:value="${primeraParte1}"/>
-                <input type="text" name="segundaParte1" th:value="${segundaParte1}"/>
+                <label>Z1 = </label>
+                <input type="text" style="width:30px" name="primeraParte1" th:value="${primeraParte1}"/>
+                <label>+</label>
+                <input type="text" style="width:30px" name="segundaParte1" th:value="${segundaParte1}"/>
+                <label>j</label>
             </div>
             <div>
+                <label>Z2 = </label>
+                <input type="text" style="width:30px" name="primeraParte2" th:value="${primeraParte2}"/>
+                <label>+</label>
+                <input type="text" style="width:30px" name="segundaParte2" th:value="${segundaParte2}"/>
+                <label>j</label>
+            </div>
+            <br/>
+            <div>
+                <label>Z1</label>
                 <select name="operacion">
                     <option th:selected="${'+' == operacionSeleccionada}" value="+">+</option>
                     <option th:selected="${'-' == operacionSeleccionada}" value="-">-</option>
                     <option th:selected="${'*' == operacionSeleccionada}" value="*">*</option>
                     <option th:selected="${'/' == operacionSeleccionada}" value="/">/</option>
                 </select>
+                <label>Z2</label>
+                <button type="submit">=</button>
+                <label th:text="${resultado}"></label>
             </div>
-            <div>
-                <input type="text" name="primeraParte2" th:value="${primeraParte2}"/>
-                <input type="text" name="segundaParte2" th:value="${segundaParte2}"/>
-            </div>
-            <button type="submit">=</button>
-            <h1 th:text="${resultado}"></h1>
+
         </form>
     </body>
 </html>

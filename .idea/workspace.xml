@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a5dca90e-f259-49e6-918b-4fef21b3c766" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/superior/ncom/ComplejoBinomico.class" afterPath="$PROJECT_DIR$/target/classes/superior/ncom/ComplejoBinomico.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/superior/ncom/ComplejoPolar.class" afterPath="$PROJECT_DIR$/target/classes/superior/ncom/ComplejoPolar.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java" afterPath="$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,18 +40,23 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="315">
+              <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
+            <state relative-caret-position="174">
+              <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#540#541#0" expanded="true" />
@@ -65,8 +69,18 @@
       <file leaf-file-name="ComplejoBinomico.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="124" column="16" lean-forward="false" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+            <state relative-caret-position="254">
+              <caret line="25" column="70" lean-forward="false" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComplejoTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="51" column="71" lean-forward="true" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -131,7 +145,6 @@
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometrica.java" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoTransformer.java" />
-        <option value="$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/jquery.min.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -140,9 +153,10 @@
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/ComplejoFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java" />
       </list>
     </option>
   </component>
@@ -268,6 +282,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ncom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="superior-ncom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ncom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="superior-ncom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ncom" type="b2602c69:ProjectViewProjectNode" />
+              <item name="superior-ncom" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ncom" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -563,26 +598,11 @@
       <workItem from="1559330613600" duration="4141000" />
       <workItem from="1559581403568" duration="96000" />
       <workItem from="1559665915213" duration="2118000" />
-      <workItem from="1559671795959" duration="1585000" />
+      <workItem from="1559671795959" duration="2323000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ComplejoTests - 2019.05.29 at 21h 10m 27s.xml">
-      <configuration name="ComplejoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComplejoTests - 2019.05.30 at 12h 01m 40s.xml">
-      <configuration name="ComplejoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComplejoTests - 2019.05.30 at 12h 05m 38s.xml">
-      <configuration name="ComplejoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComplejoTests - 2019.05.30 at 12h 06m 22s.xml">
-      <configuration name="ComplejoTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ComplejoTests - 2019.05.31 at 16h 25m 48s.xml">
-      <configuration name="ComplejoTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ComplejoTests - 2019.05.31 at 16h 28m 25s.xml">
       <configuration name="ComplejoTests" configurationId="JUnit" />
     </history-entry>
@@ -598,9 +618,24 @@
     <history-entry file="ComplejoTests - 2019.05.31 at 16h 44m 59s.xml">
       <configuration name="ComplejoTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ComplejoTests - 2019.06.04 at 15h 47m 45s.xml">
+      <configuration name="ComplejoTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComplejoTests - 2019.06.04 at 15h 48m 27s.xml">
+      <configuration name="ComplejoTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComplejoTests - 2019.06.04 at 15h 49m 23s.xml">
+      <configuration name="ComplejoTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComplejoTests - 2019.06.04 at 15h 49m 35s.xml">
+      <configuration name="ComplejoTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ComplejoTests - 2019.06.04 at 15h 49m 40s.xml">
+      <configuration name="ComplejoTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25896000" />
+    <option name="totallyTimeSpent" value="26634000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="827" extended-state="0" />
@@ -650,7 +685,7 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -855,13 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="155" column="21" lean-forward="false" selection-start-line="155" selection-start-column="21" selection-end-line="155" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.2.0.BUILD-SNAPSHOT/spring-boot-dependencies-2.2.0.BUILD-SNAPSHOT.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -915,31 +943,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="124" column="16" lean-forward="false" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+        <state relative-caret-position="254">
+          <caret line="25" column="70" lean-forward="false" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="26" lean-forward="false" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="315">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="19" column="68" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#588#589#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="148">
+          <caret line="51" column="71" lean-forward="true" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
+          <folding />
         </state>
       </provider>
     </entry>
