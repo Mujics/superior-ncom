@@ -5,23 +5,26 @@
     </head>
     <body>
 
-        <div class="container">
-            <h1>Calculadora</h1>
-            <form method="get" action="/sumar">
-                <div>
-                    <label>Ingrese complejo</label>
-                    <input type="text" name="parteReal1" />
-                    <input type="text" name="parteImaginaria1" />
-                </div>
-
-                <div>
-                    <label>Ingrese otro complejo</label>
-                    <input type="text" name="parteReal2" />
-                    <input type="text" name="parteImaginaria2" />
-                </div>
-                <h1 th:text="${resultado}"></h1>
-                <button type="submit">sumar</button>
-            </form>
-        </div>
+        <h1>Calculadora de binomicos</h1>
+        <form method="post" action="/ejecutar">
+            <div>
+                <input type="text" name="primeraParte1" th:value="${primeraParte1}"/>
+                <input type="text" name="segundaParte1" th:value="${segundaParte1}"/>
+            </div>
+            <div>
+                <select name="operacion">
+                    <option th:selected="${'+' == operacionSeleccionada}" value="+">+</option>
+                    <option th:selected="${'-' == operacionSeleccionada}" value="-">-</option>
+                    <option th:selected="${'*' == operacionSeleccionada}" value="*">*</option>
+                    <option th:selected="${'/' == operacionSeleccionada}" value="/">/</option>
+                </select>
+            </div>
+            <div>
+                <input type="text" name="primeraParte2" th:value="${primeraParte2}"/>
+                <input type="text" name="segundaParte2" th:value="${segundaParte2}"/>
+            </div>
+            <button type="submit">=</button>
+            <h1 th:text="${resultado}"></h1>
+        </form>
     </body>
 </html>

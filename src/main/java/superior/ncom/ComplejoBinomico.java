@@ -23,7 +23,7 @@ public class ComplejoBinomico implements Mostrable {
     }
 
     @Override public String mostrar() {
-        return getParteRealMostrable() + getParteImaginariaMostrable();
+        return "(" + getParteRealMostrable() + getParteImaginariaMostrable() + ")";
     }
 
     public ComplejoPolar transformarAPolar() {
@@ -120,5 +120,18 @@ public class ComplejoBinomico implements Mostrable {
         ComplejoBinomico complejoBinomico = complejoPolar.transformarABinomico();
         this.parteReal = complejoBinomico.parteReal;
         this.parteImaginaria = complejoBinomico.parteImaginaria;
+    }
+
+    public void operar(ComplejoBinomico complejoBinomico, String operacion) {
+        if (Objects.equals(operacion, "+")) {
+            this.suma(complejoBinomico);
+        } else if (Objects.equals(operacion, "-")){
+            this.resta(complejoBinomico);
+        } else if (Objects.equals(operacion, "*")){
+            this.multiplica(complejoBinomico);
+        }
+        else if (Objects.equals(operacion, "/")){
+            this.dividi(complejoBinomico);
+        }
     }
 }

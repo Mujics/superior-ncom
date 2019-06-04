@@ -12,6 +12,11 @@ public class ComplejoPolar implements Mostrable{
 		this.argumento = argumento;
     }
 
+    public ComplejoPolar(String modulo, String argumento) {
+        this.modulo = Double.parseDouble(modulo);
+        this.argumento = Double.parseDouble(argumento);
+    }
+
     @Override public String mostrar() {
         return "[ " + getModuloMostrable() + " ; " + getParteImaginariaMostrable() + "π ]";
     }
