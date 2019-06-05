@@ -46,7 +46,7 @@ public class MainController {
         return new ModelAndView("index", modelMap);
     }
 
-    @RequestMapping(value = "/ejecutarPolares", method = RequestMethod.GET)
+    @RequestMapping(value = "/ejecutarPolares", method = RequestMethod.POST)
     public ModelAndView sumar(@RequestParam("primeraParte1") String primeraParte1, @RequestParam("segundaParte1") String segundaParte1, @RequestParam("primeraParte2") String primeraParte2, @RequestParam("segundaParte2") String segundaParte2, @RequestParam("operacion") String operacion) {
 
         ComplejoPolar complejoPolar1 = new ComplejoPolar(primeraParte1, segundaParte1);
