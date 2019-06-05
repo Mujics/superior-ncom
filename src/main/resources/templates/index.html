@@ -6,7 +6,10 @@
     <body>
 
         <h1>Calculadora de binomicos</h1>
-        <form method="post" action="/ejecutar">
+        <form method="post" action="/irAPolares">
+            <button type="submit">ir a polares</button>
+        </form>
+        <form method="post" action="/ejecutarBinomicos">
             <div>
                 <label>Z1 = </label>
                 <input type="text" style="width:30px" name="primeraParte1" th:value="${primeraParte1}"/>

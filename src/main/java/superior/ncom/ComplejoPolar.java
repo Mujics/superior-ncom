@@ -1,6 +1,7 @@
 package superior.ncom;
 
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 public class ComplejoPolar implements Mostrable{
 
@@ -18,7 +19,7 @@ public class ComplejoPolar implements Mostrable{
     }
 
     @Override public String mostrar() {
-        return "[ " + getModuloMostrable() + " ; " + getParteImaginariaMostrable() + "π ]";
+        return "[ " + getModuloMostrable() + " ; " + getParteImaginariaMostrable() + " ]";
     }
 
     private String getModuloMostrable() {
@@ -100,5 +101,18 @@ public class ComplejoPolar implements Mostrable{
 
     public FuncionTrigonometrica convertirEnFuncion(Double frecuencia) {
         return new FuncionTrigonometrica(modulo, frecuencia, argumento);
+    }
+
+    public void operar(ComplejoPolar complejoPolar, String operacion) {
+        if (Objects.equals(operacion, "+")) {
+            this.suma(complejoPolar);
+        } else if (Objects.equals(operacion, "-")){
+            this.resta(complejoPolar);
+        } else if (Objects.equals(operacion, "*")){
+            this.multiplica(complejoPolar);
+        }
+        else if (Objects.equals(operacion, "/")){
+            this.dividi(complejoPolar);
+        }
     }
 }
