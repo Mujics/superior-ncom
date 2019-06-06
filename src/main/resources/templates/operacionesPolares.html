@@ -16,17 +16,17 @@
             <div class="inputs">
                 <div class="complejo">
                     <label>Z1 = (</label>
-                    <input type="text" autocomplete="off" class='input' th:value="${primeraParte1}" />
+                    <input type="text" autocomplete="off" class='input' name="primeraParte1" th:value="${allParams?.get('primeraParte1')}" />
                     <label>,</label>
-                    <input type="text" autocomplete="off" class='input' th:value="${segundaParte1}" />
+                    <input type="text" autocomplete="off" class='input' name="segundaParte1" th:value="${allParams?.get('segundaParte1')}"  />
                     <label>)</label>
                 </div>
                 <div class="divider div-transparent"></div>
                 <div class="complejo">
                     <label>Z2 = (</label>
-                    <input type="text" autocomplete="off" class='input' th:value="${primeraParte2}" />
+                    <input type="text" autocomplete="off" class='input' name="primeraParte2" th:value="${allParams?.get('primeraParte2')}"  />
                     <label>,</label>
-                    <input type="text" autocomplete="off" class='input' th:value="${segundaParte2}" />
+                    <input type="text" autocomplete="off" class='input' name="segundaParte2" th:value="${allParams?.get('segundaParte2')}"  />
                     <label>)</label>
                 </div>
             </div>
@@ -34,10 +34,10 @@
             <div>
                 <label>Z1</label>
                 <select class="operacion" name="operacion">
-                    <option th:selected="${'+' == operacionSeleccionada}" value="+">+</option>
-                    <option th:selected="${'-' == operacionSeleccionada}" value="-">-</option>
-                    <option th:selected="${'*' == operacionSeleccionada}" value="*">*</option>
-                    <option th:selected="${'/' == operacionSeleccionada}" value="/">/</option>
+                    <option th:selected="${'+' == allParams?.get('operacion')}" value="+">+</option>
+                    <option th:selected="${'-' == allParams?.get('operacion')}" value="-">-</option>
+                    <option th:selected="${'*' == allParams?.get('operacion')}" value="*">*</option>
+                    <option th:selected="${'/' == allParams?.get('operacion')}" value="/">/</option>
                 </select>
                 <label>Z2</label>
                 <button type="submit">=</button>

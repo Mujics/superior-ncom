@@ -9,13 +9,15 @@ import org.springframework.web.servlet.ModelAndView;
 import superior.ncom.ComplejoBinomico;
 import superior.ncom.ComplejoPolar;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping(value = "")
 public class MainController {
 
     @RequestMapping(value = "")
     public ModelAndView index() {
-        return new ModelAndView("index");
+        return new ModelAndView("operacionesBinomicas");
     }
 
     @RequestMapping(value = "/irAPolares")
@@ -25,42 +27,32 @@ public class MainController {
 
     @RequestMapping(value = "/irABinomicos")
     public ModelAndView irABinomicos() {
-        return new ModelAndView("index");
+        return new ModelAndView("operacionesBinomicas");
     }
 
     @RequestMapping(value = "/ejecutarBinomicos", method = RequestMethod.POST)
-    public ModelAndView ejecutarBinomicos(@RequestParam("primeraParte1") String primeraParte1, @RequestParam("segundaParte1") String segundaParte1, @RequestParam("primeraParte2") String primeraParte2, @RequestParam("segundaParte2") String segundaParte2, @RequestParam("operacion") String operacion) {
+    public ModelAndView ejecutarBinomicos(@RequestParam Map<String,String> allParams) {
 
-        ComplejoBinomico complejoBinomico1 = new ComplejoBinomico(primeraParte1, segundaParte1);
-        ComplejoBinomico complejoBinomico2 = new ComplejoBinomico(primeraParte2, segundaParte2);
+        ComplejoBinomico complejoBinomico1 = new ComplejoBinomico(allParams.get("primeraParte1"), allParams.get("segundaParte1"));
+        ComplejoBinomico complejoBinomico2 = new ComplejoBinomico(allParams.get("primeraParte2"), allParams.get("segundaParte2"));
 
-        complejoBinomico1.operar(complejoBinomico2, operacion);
+        complejoBinomico1.operar(complejoBinomico2, allParams.get("operacion"));
 
         ModelMap modelMap = new ModelMap();
         modelMap.addAttribute("resultado", complejoBinomico1.mostrar());
-        modelMap.addAttribute("primeraParte1", primeraParte1);
-        modelMap.addAttribute("primeraParte2", primeraParte2);
-        modelMap.addAttribute("segundaParte1", segundaParte1);
-        modelMap.addAttribute("segundaParte2", segundaParte2);
-        modelMap.addAttribute("operacionSeleccionada", operacion);
-        return new ModelAndView("index", modelMap);
+        modelMap.addAttribute("allParams", allParams);
+        return new ModelAndView("operacionesBinomicas", modelMap);
     }
 
     @RequestMapping(value = "/ejecutarPolares", method = RequestMethod.POST)
-    public ModelAndView sumar(@RequestParam("primeraParte1") String primeraParte1, @RequestParam("segundaParte1") String segundaParte1, @RequestParam("primeraParte2") String primeraParte2, @RequestParam("segundaParte2") String segundaParte2, @RequestParam("operacion") String operacion) {
+    public ModelAndView ejecutarPolares(@RequestParam Map<String,String> allParams) {
+        ComplejoPolar complejoPolar1 = new ComplejoPolar(allParams.get("primeraParte1"), allParams.get("segundaParte1"));
+        ComplejoPolar complejoPolar2 = new ComplejoPolar(allParams.get("primeraParte2"), allParams.get("segundaParte2"));
 
-        ComplejoPolar complejoPolar1 = new ComplejoPolar(primeraParte1, segundaParte1);
-        ComplejoPolar complejoPolar2 = new ComplejoPolar(primeraParte1, segundaParte1);
-
-        complejoPolar1.operar(complejoPolar2, operacion);
-
+        complejoPolar1.operar(complejoPolar2, allParams.get("operacion"));
         ModelMap modelMap = new ModelMap();
         modelMap.addAttribute("resultado", complejoPolar1.mostrar());
-        modelMap.addAttribute("primeraParte1", primeraParte1);
-        modelMap.addAttribute("primeraParte2", primeraParte2);
-        modelMap.addAttribute("segundaParte1", segundaParte1);
-        modelMap.addAttribute("segundaParte2", segundaParte2);
-        modelMap.addAttribute("operacionSeleccionada", operacion);
+        modelMap.addAttribute("allParams", allParams);
         return new ModelAndView("operacionesPolares", modelMap);
     }
 }
