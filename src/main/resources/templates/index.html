@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>Calculadora</title>
-    </head>
-    <body>
 
-        <h1>Calculadora de binomicos</h1>
-        <form method="post" action="/irAPolares">
-            <button type="submit">ir a polares</button>
+<head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+    <h1>Calculadora de complejos binomicos</h1>
+    <div class="contenedor">
+        <form class="cambiar-modo" method="post" action="/irAPolares">
+            <button type="submit">Ir a modo polar</button>
         </form>
-        <form method="post" action="/ejecutarBinomicos">
-            <div>
-                <label>Z1 = </label>
-                <input type="text" style="width:30px" name="primeraParte1" th:value="${primeraParte1}"/>
-                <label>+</label>
-                <input type="text" style="width:30px" name="segundaParte1" th:value="${segundaParte1}"/>
-                <label>j</label>
+        <form class="calculadora" method="post" action="/ejecutarBinomicos">
+            <div class="inputs">
+                <div class="complejo">
+                    <label>Z1 = </label>
+                    <input type="text" autocomplete="off" class='input' name="primeraParte1" th:value="${primeraParte1}" />
+                    <label>+</label>
+                    <input type="text" autocomplete="off" class='input' name="segundaParte1" th:value="${segundaParte1}" />
+                    <label>j</label>
+                </div>
+                <div class="divider div-transparent"></div>
+                <div class="complejo">
+                    <label>Z2 = </label>
+                    <input type="text" autocomplete="off" class='input' name="primeraParte2" th:value="${primeraParte2}" />
+                    <label>+</label>
+                    <input type="text" autocomplete="off" class='input' name="segundaParte2" th:value="${segundaParte2}" />
+                    <label>j</label>
+                </div>
             </div>
-            <div>
-                <label>Z2 = </label>
-                <input type="text" style="width:30px" name="primeraParte2" th:value="${primeraParte2}"/>
-                <label>+</label>
-                <input type="text" style="width:30px" name="segundaParte2" th:value="${segundaParte2}"/>
-                <label>j</label>
-            </div>
-            <br/>
+            <div class="divider div-transparent"></div>
             <div>
                 <label>Z1</label>
-                <select name="operacion">
+                <select class="operacion" name="operacion">
                     <option th:selected="${'+' == operacionSeleccionada}" value="+">+</option>
                     <option th:selected="${'-' == operacionSeleccionada}" value="-">-</option>
                     <option th:selected="${'*' == operacionSeleccionada}" value="*">*</option>
@@ -39,5 +45,7 @@
             </div>
 
         </form>
-    </body>
+    </div>
+</body>
+
 </html>

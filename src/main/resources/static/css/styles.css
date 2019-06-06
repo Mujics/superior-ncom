@@ -1,0 +1,91 @@
+button {
+  background-color: transparent;
+  border: 1px solid blue;
+  border-radius: 5px;
+  color: blue;
+  cursor: pointer;
+  padding: 3px 6px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.calculadora {
+  align-self: center;
+  border: 2px solid blue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  padding: 20px;
+  width: 100%;
+}
+
+.campos {
+  margin-bottom: 20px;
+}
+
+.cambiar-modo {
+  margin-bottom: 30px;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.complejo {
+  display: flex;
+  justify-content: space-around;
+}
+
+.divider
+{
+	position: relative;
+	margin: 15px 0;
+	height: 1px;
+}
+
+.div-transparent:before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 5%;
+	right: 5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.inputs {
+  max-width: 250px;
+  width: 100%;
+}
+
+.input {
+  width: 40px;
+}
+
+.input:focus{
+  border:1px solid cyan;
+  box-shadow: 0 0 10px #719ECE;
+  outline: none;
+}
+
+.operacion {
+  background-color: transparent;
+  border: 1px solid blue;
+  border-radius: 8px;
+  color: blue;
+  padding: 2px;
+}
+
+.operacion:focus {
+  outline: none;
+}
