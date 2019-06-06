@@ -3,7 +3,7 @@ package superior.ncom;
 import java.text.DecimalFormat;
 import java.util.Objects;
 
-public class ComplejoBinomico implements Mostrable {
+public class ComplejoBinomico extends Complejo {
 
     private Double parteReal;
     private Double parteImaginaria;
@@ -18,6 +18,11 @@ public class ComplejoBinomico implements Mostrable {
         this.parteImaginaria = Double.parseDouble(parteImaginaria);
     }
 
+    public ComplejoBinomico(String resultado) {
+        this.parteReal = Double.parseDouble(resultado.substring(0, resultado.indexOf(" ")));
+        this.parteImaginaria = Double.parseDouble(resultado.substring(resultado.indexOf(" ") + 2, resultado.indexOf("j")));
+    }
+
     public void transformarAConjugado() {
         parteImaginaria = -parteImaginaria;
     }
@@ -26,7 +31,7 @@ public class ComplejoBinomico implements Mostrable {
         return getParteRealMostrable() + getParteImaginariaMostrable();
     }
 
-    public ComplejoPolar transformarAPolar() {
+    public Complejo transformar() {
         return ComplejoTransformer.convertirAPolar(parteReal, parteImaginaria);
     }
 
@@ -51,7 +56,7 @@ public class ComplejoBinomico implements Mostrable {
         DecimalFormat df = new DecimalFormat("###.##");
         String parteImaginariaFormatted =  df.format(Math.abs(this.parteImaginaria));
         if (!Objects.equals(parteImaginariaFormatted, "0")) {
-            return signo + parteImaginariaFormatted + "j";
+            return signo + parteImaginariaFormatted + "j (binomico)";
         }
         return "";
     }
@@ -62,7 +67,7 @@ public class ComplejoBinomico implements Mostrable {
     }
 
     public void suma(ComplejoPolar complejoPolar) {
-        ComplejoBinomico complejoBinomico = complejoPolar.transformarABinomico();
+        ComplejoBinomico complejoBinomico = complejoPolar.transformar();
         this.suma(complejoBinomico);
     }
 
@@ -72,38 +77,38 @@ public class ComplejoBinomico implements Mostrable {
     }
 
     public void resta(ComplejoPolar complejoPolar) {
-        ComplejoBinomico complejoBinomico = complejoPolar.transformarABinomico();
+        ComplejoBinomico complejoBinomico = complejoPolar.transformar();
         this.resta(complejoBinomico);
     }
 
     public void multiplica(ComplejoBinomico complejoBinomico) {
-        ComplejoPolar thisPolar = this.transformarAPolar();
-        ComplejoPolar otherPolar = complejoBinomico.transformarAPolar();
+        Complejo thisPolar = this.transformar();
+        Complejo otherPolar = complejoBinomico.transformar();
         thisPolar.multiplica(otherPolar);
         cloneComplejo(thisPolar);
     }
 
     public void multiplica(ComplejoPolar complejoPolar) {
-        ComplejoPolar thisPolar = this.transformarAPolar();
+        Complejo thisPolar = this.transformar();
         thisPolar.multiplica(complejoPolar);
         cloneComplejo(thisPolar);
     }
 
     public void dividi(ComplejoBinomico complejoBinomico) {
-        ComplejoPolar thisPolar = this.transformarAPolar();
-        ComplejoPolar otherPolar = complejoBinomico.transformarAPolar();
+        Complejo thisPolar = this.transformar();
+        Complejo otherPolar = complejoBinomico.transformar();
         thisPolar.dividi(otherPolar);
         cloneComplejo(thisPolar);
     }
 
     public void dividi(ComplejoPolar complejoPolar) {
-        ComplejoPolar thisPolar = this.transformarAPolar();
+        Complejo thisPolar = this.transformar();
         thisPolar.dividi(complejoPolar);
         cloneComplejo(thisPolar);
     }
 
-    public void potencia(Integer potencia) {
-        ComplejoPolar thisPolar = this.transformarAPolar();
+    public void potencia(Double potencia) {
+        ComplejoPolar thisPolar = (ComplejoPolar) this.transformar();
         thisPolar.potencia(potencia);
         cloneComplejo(thisPolar);
     }
@@ -116,22 +121,9 @@ public class ComplejoBinomico implements Mostrable {
         }
     }
 
-    private void cloneComplejo(ComplejoPolar complejoPolar) {
-        ComplejoBinomico complejoBinomico = complejoPolar.transformarABinomico();
+    private void cloneComplejo(Complejo complejoPolar) {
+        ComplejoBinomico complejoBinomico = (ComplejoBinomico) complejoPolar.transformar();
         this.parteReal = complejoBinomico.parteReal;
         this.parteImaginaria = complejoBinomico.parteImaginaria;
-    }
-
-    public void operar(ComplejoBinomico complejoBinomico, String operacion) {
-        if (Objects.equals(operacion, "+")) {
-            this.suma(complejoBinomico);
-        } else if (Objects.equals(operacion, "-")){
-            this.resta(complejoBinomico);
-        } else if (Objects.equals(operacion, "*")){
-            this.multiplica(complejoBinomico);
-        }
-        else if (Objects.equals(operacion, "/")){
-            this.dividi(complejoBinomico);
-        }
     }
 }
