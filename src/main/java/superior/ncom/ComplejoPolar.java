@@ -18,12 +18,14 @@ public class ComplejoPolar extends Complejo {
     }
 
     public ComplejoPolar(String resultado) {
-        this.modulo = Double.parseDouble(resultado.substring(2, resultado.indexOf(";") - 1));
-        this.argumento = Double.parseDouble(resultado.substring(resultado.indexOf(";") + 1, resultado.indexOf("]") - 1));
+        String modulo = resultado.substring(1, resultado.indexOf(";"));
+        this.modulo = Double.parseDouble(modulo);
+        String argumento = resultado.substring(resultado.indexOf(";")+1, resultado.indexOf("]"));
+        this.argumento = Double.parseDouble(argumento);
     }
 
     @Override public String mostrar() {
-        return "[ " + getModuloMostrable() + " ; " + getParteImaginariaMostrable() + " ] (polar)";
+        return "[" + getModuloMostrable() + ";" + getParteImaginariaMostrable() + "]";
     }
 
     private String getModuloMostrable() {

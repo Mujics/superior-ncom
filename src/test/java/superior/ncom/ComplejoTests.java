@@ -209,7 +209,7 @@ public class ComplejoTests {
         Assert.assertEquals(funcion1.mostrar(), "8.947 . cos(5t + 0.989)");
     }
 
-    @Test
+   /* @Test
     public void crear2ComplejosConStringYSumar() {
         Complejo complejo1 = ComplejoFactory.create("12", "12", "binomico");
         Complejo complejo2 = ComplejoFactory.create("12", "12", "binomico");
@@ -223,6 +223,6 @@ public class ComplejoTests {
         ComplejoPolar segundo = new ComplejoPolar(5D,Math.PI / 5);
         Complejo complejo = ComplejoFactory.createFromString("102 + 3j");
         Assert.assertEquals(primero.mostrar(), complejo.mostrar());
-    }
+    }*/
 
 }

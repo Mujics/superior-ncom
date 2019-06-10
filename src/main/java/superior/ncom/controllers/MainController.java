@@ -22,8 +22,8 @@ public class MainController {
 
     @RequestMapping(value = "/calcular", method = RequestMethod.POST)
     public ModelAndView calcular(@RequestParam Map<String,String> allParams) {
-        Complejo complejo1 = ComplejoFactory.create(allParams.get("primeraParte1"), allParams.get("segundaParte1"), allParams.get("tipo1"));
-        Complejo complejo2 = ComplejoFactory.create(allParams.get("primeraParte2"), allParams.get("segundaParte2"), allParams.get("tipo2"));
+        Complejo complejo1 = ComplejoFactory.create(allParams.get("complejo1"));
+        Complejo complejo2 = ComplejoFactory.create(allParams.get("complejo2"));
 
         complejo1.operar(complejo2, allParams.get("operacion"));
 
@@ -35,7 +35,7 @@ public class MainController {
 
     @RequestMapping(value = "/calcularEspeciales", method = RequestMethod.POST)
     public ModelAndView calcularEspecial(@RequestParam Map<String,String> allParams) {
-        Complejo complejo1 = ComplejoFactory.create(allParams.get("primeraParte1Especial"), allParams.get("segundaParte1Especial"), allParams.get("tipo1Especial"));
+        Complejo complejo1 = ComplejoFactory.create(allParams.get("complejoEspecial"));
         Double numero = Double.parseDouble(allParams.get("numeroEspecial"));
 
         complejo1.operar(numero, allParams.get("operacionEspecial"));
@@ -48,7 +48,7 @@ public class MainController {
 
     @RequestMapping(value = "/cambiarDeTipoEspecial", method = RequestMethod.POST)
     public ModelAndView cambiarDeTipoEspecial(@RequestParam Map<String,String> allParams) {
-        Complejo complejo = ComplejoFactory.createFromString(allParams.get("resultadoEspecial"));
+        Complejo complejo = ComplejoFactory.create(allParams.get("resultadoEspecial"));
         Complejo complejo1 = complejo.transformar();
 
         ModelMap modelMap = new ModelMap();
@@ -59,7 +59,7 @@ public class MainController {
 
     @RequestMapping(value = "/cambiarDeTipo", method = RequestMethod.POST)
     public ModelAndView cambiarDeTipo(@RequestParam Map<String,String> allParams) {
-        Complejo complejo = ComplejoFactory.createFromString(allParams.get("resultado"));
+        Complejo complejo = ComplejoFactory.create(allParams.get("resultado"));
         Complejo complejo1 = complejo.transformar();
 
         ModelMap modelMap = new ModelMap();

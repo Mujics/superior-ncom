@@ -19,8 +19,8 @@ public class ComplejoBinomico extends Complejo {
     }
 
     public ComplejoBinomico(String resultado) {
-        this.parteReal = Double.parseDouble(resultado.substring(0, resultado.indexOf(" ")));
-        this.parteImaginaria = Double.parseDouble(resultado.substring(resultado.indexOf(" ") + 2, resultado.indexOf("j")));
+        this.parteReal = Double.parseDouble(resultado.substring(1, resultado.indexOf(",")));
+        this.parteImaginaria = Double.parseDouble(resultado.substring(resultado.indexOf(",")+1, resultado.indexOf(")")));
     }
 
     public void transformarAConjugado() {
@@ -28,7 +28,7 @@ public class ComplejoBinomico extends Complejo {
     }
 
     @Override public String mostrar() {
-        return getParteRealMostrable() + getParteImaginariaMostrable();
+        return "(" + getParteRealMostrable() + "," + getParteImaginariaMostrable() + ")";
     }
 
     public Complejo transformar() {
@@ -37,28 +37,12 @@ public class ComplejoBinomico extends Complejo {
 
     private String getParteRealMostrable() {
         DecimalFormat df = new DecimalFormat("###.##");
-        String valueFormatted = df.format(this.parteReal);
-        if (Objects.equals(valueFormatted, "0")) {
-            return "";
-        } else {
-            return valueFormatted;
-        }
+        return df.format(this.parteReal);
     }
 
     private String getParteImaginariaMostrable() {
-        String signo = " + ";
-        if (parteImaginaria < 0) {
-            signo = " - ";
-        }
-        if (Objects.equals(getParteRealMostrable(), "")) {
-            signo = "";
-        }
         DecimalFormat df = new DecimalFormat("###.##");
-        String parteImaginariaFormatted =  df.format(Math.abs(this.parteImaginaria));
-        if (!Objects.equals(parteImaginariaFormatted, "0")) {
-            return signo + parteImaginariaFormatted + "j (binomico)";
-        }
-        return "";
+        return df.format(Math.abs(this.parteImaginaria));
     }
 
     public void suma(ComplejoBinomico complejoBinomico){
