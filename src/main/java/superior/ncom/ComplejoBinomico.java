@@ -13,36 +13,17 @@ public class ComplejoBinomico extends Complejo {
         this.parteImaginaria = parteImaginaria;
     }
 
-    public ComplejoBinomico(String parteReal, String parteImaginaria) {
-        this.parteReal = Double.parseDouble(parteReal);
-        this.parteImaginaria = Double.parseDouble(parteImaginaria);
-    }
-
-    public ComplejoBinomico(String resultado) {
-        this.parteReal = Double.parseDouble(resultado.substring(1, resultado.indexOf(",")));
-        this.parteImaginaria = Double.parseDouble(resultado.substring(resultado.indexOf(",")+1, resultado.indexOf(")")));
-    }
-
     public void transformarAConjugado() {
         parteImaginaria = -parteImaginaria;
     }
 
     @Override public String mostrar() {
-        return "(" + getParteRealMostrable() + "," + getParteImaginariaMostrable() + ")";
+        DecimalFormat df = new DecimalFormat("###.##");
+        return "(" + df.format(parteReal) + "," + df.format(Math.abs(parteImaginaria)) + ")";
     }
 
-    public Complejo transformar() {
+    public ComplejoPolar transformar() {
         return ComplejoTransformer.convertirAPolar(parteReal, parteImaginaria);
-    }
-
-    private String getParteRealMostrable() {
-        DecimalFormat df = new DecimalFormat("###.##");
-        return df.format(this.parteReal);
-    }
-
-    private String getParteImaginariaMostrable() {
-        DecimalFormat df = new DecimalFormat("###.##");
-        return df.format(Math.abs(this.parteImaginaria));
     }
 
     public void suma(ComplejoBinomico complejoBinomico){
@@ -65,10 +46,14 @@ public class ComplejoBinomico extends Complejo {
         this.resta(complejoBinomico);
     }
 
-    public void multiplica(ComplejoBinomico complejoBinomico) {
+    public void multiplica(ComplejoBinomico complejoBinomico) throws Exception {
         Complejo thisPolar = this.transformar();
         Complejo otherPolar = complejoBinomico.transformar();
-        thisPolar.multiplica(otherPolar);
+        try {
+            thisPolar.multiplica(otherPolar);
+        } catch (Exception e) {
+            throw new Exception();
+        }
         cloneComplejo(thisPolar);
     }
 
@@ -78,7 +63,7 @@ public class ComplejoBinomico extends Complejo {
         cloneComplejo(thisPolar);
     }
 
-    public void dividi(ComplejoBinomico complejoBinomico) {
+    public void dividi(ComplejoBinomico complejoBinomico) throws Exception {
         Complejo thisPolar = this.transformar();
         Complejo otherPolar = complejoBinomico.transformar();
         thisPolar.dividi(otherPolar);

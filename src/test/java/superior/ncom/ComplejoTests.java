@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ComplejoTests {
 
-    @Test
+    /*@Test
     public void mostrar_numero_complejo_en_forma_binomica() {
         Mostrable complejoEnFormaBinomica = new ComplejoBinomico(4.0,4.0);
         Assert.assertEquals(complejoEnFormaBinomica.mostrar(), "4 + 4j");
@@ -169,7 +169,7 @@ public class ComplejoTests {
         ComplejoBinomico primero = new ComplejoBinomico(2D,2D);
         primero.potencia(4);
         Assert.assertEquals(primero.mostrar(), "-64");
-    }*/
+    }
 
     @Test
     public void raizDeComplejos() {
@@ -224,5 +224,14 @@ public class ComplejoTests {
         Complejo complejo = ComplejoFactory.createFromString("102 + 3j");
         Assert.assertEquals(primero.mostrar(), complejo.mostrar());
     }*/
+
+    @Test
+    public void a() {
+        ComplejoBinomico primero = new ComplejoBinomico(1D,2D);
+        primero.potencia(3D);
+        ComplejoPolar polar = primero.transformar();
+        ComplejoBinomico segundo = polar.transformar();
+        Assert.assertEquals(primero.mostrar(), segundo.mostrar());
+    }
 
 }

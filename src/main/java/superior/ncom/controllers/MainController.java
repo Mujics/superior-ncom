@@ -25,10 +25,14 @@ public class MainController {
         Complejo complejo1 = ComplejoFactory.create(allParams.get("complejo1"));
         Complejo complejo2 = ComplejoFactory.create(allParams.get("complejo2"));
 
-        complejo1.operar(complejo2, allParams.get("operacion"));
-
         ModelMap modelMap = new ModelMap();
-        modelMap.addAttribute("resultado", complejo1.mostrar());
+        try {
+            complejo1.operar(complejo2, allParams.get("operacion"));
+            modelMap.addAttribute("resultado", complejo1.mostrar());
+        } catch (Exception e) {
+            modelMap.addAttribute("resultado", "Error");
+        }
+
         modelMap.addAttribute("allParams", allParams);
         return new ModelAndView("operaciones", modelMap);
     }
@@ -36,12 +40,15 @@ public class MainController {
     @RequestMapping(value = "/calcularEspeciales", method = RequestMethod.POST)
     public ModelAndView calcularEspecial(@RequestParam Map<String,String> allParams) {
         Complejo complejo1 = ComplejoFactory.create(allParams.get("complejoEspecial"));
-        Double numero = Double.parseDouble(allParams.get("numeroEspecial"));
-
-        complejo1.operar(numero, allParams.get("operacionEspecial"));
-
         ModelMap modelMap = new ModelMap();
-        modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
+        try {
+            Double numero = Double.parseDouble(allParams.get("numeroEspecial"));
+            complejo1.operar(numero, allParams.get("operacionEspecial"));
+            modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
+        } catch (Exception e) {
+            modelMap.addAttribute("resultadoEspecial", "Error");
+        }
+
         modelMap.addAttribute("allParams", allParams);
         return new ModelAndView("operaciones", modelMap);
     }

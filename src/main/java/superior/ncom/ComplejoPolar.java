@@ -12,30 +12,9 @@ public class ComplejoPolar extends Complejo {
 		this.argumento = argumento;
     }
 
-    public ComplejoPolar(String modulo, String argumento) {
-        this.modulo = Double.parseDouble(modulo);
-        this.argumento = Double.parseDouble(argumento);
-    }
-
-    public ComplejoPolar(String resultado) {
-        String modulo = resultado.substring(1, resultado.indexOf(";"));
-        this.modulo = Double.parseDouble(modulo);
-        String argumento = resultado.substring(resultado.indexOf(";")+1, resultado.indexOf("]"));
-        this.argumento = Double.parseDouble(argumento);
-    }
-
     @Override public String mostrar() {
-        return "[" + getModuloMostrable() + ";" + getParteImaginariaMostrable() + "]";
-    }
-
-    private String getModuloMostrable() {
         DecimalFormat df = new DecimalFormat("###.##");
-        return df.format(modulo);
-    }
-
-    private String getParteImaginariaMostrable() {
-        DecimalFormat df = new DecimalFormat("###.##");
-        return df.format(argumento);
+        return "[" + df.format(modulo) + ";" + df.format(argumento) + "]";
     }
 
     public ComplejoBinomico transformar() {
@@ -73,7 +52,7 @@ public class ComplejoPolar extends Complejo {
         argumento = this.argumento + complejoPolar.argumento;
     }
 
-    public void multiplica(ComplejoBinomico complejoBinomico){
+    public void multiplica(ComplejoBinomico complejoBinomico) throws Exception {
         Complejo complejoPolar = complejoBinomico.transformar();
         this.multiplica(complejoPolar);
     }
@@ -83,7 +62,7 @@ public class ComplejoPolar extends Complejo {
         argumento = this.argumento - complejoPolar.argumento;
     }
 
-    public void dividi(ComplejoBinomico complejoBinomico){
+    public void dividi(ComplejoBinomico complejoBinomico) throws Exception {
         Complejo complejoPolar = complejoBinomico.transformar();
         this.dividi(complejoPolar);
     }

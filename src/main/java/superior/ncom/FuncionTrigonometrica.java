@@ -1,6 +1,7 @@
 package superior.ncom;
 
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 public class FuncionTrigonometrica implements Mostrable{
     private Double amplitud;
@@ -13,16 +14,24 @@ public class FuncionTrigonometrica implements Mostrable{
         this.fase = fase;
     }
 
-    public FuncionTrigonometrica(String amplitud, String frecuencia, String fase) {
+    public FuncionTrigonometrica(String amplitud, String frecuencia, String fase, String tipoDeFuncion) {
         this.amplitud = Double.parseDouble(amplitud);
         this.frecuencia = Double.parseDouble(frecuencia);
-        this.fase = Double.parseDouble(fase);
+        if (Objects.equals(tipoDeFuncion, "seno")) {
+            this.fase = Double.parseDouble(fase) + Math.PI/2;
+        } else {
+            this.fase = Double.parseDouble(fase);
+        }
     }
 
-    public FuncionTrigonometrica(Double amplitud, Double frecuencia, Double fase, String seno) {
+    public FuncionTrigonometrica(Double amplitud, Double frecuencia, Double fase, String tipoDeFuncion) {
         this.amplitud = amplitud;
         this.frecuencia = frecuencia;
-        this.fase = fase + Math.PI/2;
+        if (Objects.equals(tipoDeFuncion, "seno")) {
+            this.fase = fase + Math.PI/2;
+        } else {
+            this.fase = fase;
+        }
     }
 
     public void sumar(FuncionTrigonometrica funcion2) {
@@ -64,5 +73,13 @@ public class FuncionTrigonometrica implements Mostrable{
         this.amplitud = funcionTrigonometrica.amplitud;
         this.frecuencia = funcionTrigonometrica.frecuencia;
         this.fase = funcionTrigonometrica.fase;
+    }
+
+    public void restar(FuncionTrigonometrica funcionTrigonometrica2) {
+        ComplejoPolar thisPolar = this.obtenerComplejoPolar();
+        ComplejoPolar otherPolar = funcionTrigonometrica2.obtenerComplejoPolar();
+        thisPolar.resta(otherPolar);
+        FuncionTrigonometrica funcionTrigonometrica = thisPolar.convertirEnFuncion(frecuencia);
+        setearValores(funcionTrigonometrica);
     }
 }

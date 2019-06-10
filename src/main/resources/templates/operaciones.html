@@ -14,6 +14,9 @@
     <div class="contenedor">
         <form class="calculadora" method="post" action="/calcular">
             <div class="inputs">
+                <div class="tooltip">Formato?
+                    <span class="tooltiptext">binomicos => (a,b) y polares => [a;b]</span>
+                </div>
                 <div class="complejo">
                     <label>Z1 = </label>
                     <input type="text" autocomplete="off" class='input' name="complejo1" th:value="${allParams?.get('complejo1')}" />

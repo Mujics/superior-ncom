@@ -3,9 +3,11 @@ package superior.ncom;
 public class ComplejoFactory {
     public static Complejo create(String complejo) {
         if (complejo.startsWith("(")) {
-            return new ComplejoBinomico(complejo);
+            return ComplejoTransformer.convertirStringABinomico(complejo);
+        } else if (complejo.startsWith("[")) {
+            return ComplejoTransformer.convertirStringAPolar(complejo);
         } else {
-            return new ComplejoPolar(complejo);
+            return new NoComplejo();
         }
 
     }
