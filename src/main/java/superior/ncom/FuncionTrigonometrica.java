@@ -13,6 +13,12 @@ public class FuncionTrigonometrica implements Mostrable{
         this.fase = fase;
     }
 
+    public FuncionTrigonometrica(String amplitud, String frecuencia, String fase) {
+        this.amplitud = Double.parseDouble(amplitud);
+        this.frecuencia = Double.parseDouble(frecuencia);
+        this.fase = Double.parseDouble(fase);
+    }
+
     public FuncionTrigonometrica(Double amplitud, Double frecuencia, Double fase, String seno) {
         this.amplitud = amplitud;
         this.frecuencia = frecuencia;

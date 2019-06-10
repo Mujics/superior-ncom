@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+    <h1>Sumador de funciones trigonometricas</h1>
+    <form method="post" action="/">
+        <button type="submit">Ir a calculadora</button>
+    </form>
+    <div class="contenedor">
+        <form class="calculadora" method="post" action="/funciones/calcular">
+            <div class="inputs">
+                <div class="complejo">
+                    <label>F(t)</label>
+                    <label>Amplitud: </label>
+                    <input type="text" autocomplete="off" class='input' name="amplitud1" th:value="${allParams?.get('amplitud1')}" />
+                    <label>Frecuencia: </label>
+                    <input type="text" autocomplete="off" class='input' name="frecuencia1" th:value="${allParams?.get('frecuencia1')}" />
+                    <label>Fase: </label>
+                    <input type="text" autocomplete="off" class='input' name="fase1" th:value="${allParams?.get('fase1')}" />
+                </div>
+                <div class="divider div-transparent"></div>
+                <div class="complejo">
+                    <label>G(t)</label>
+                    <label>Amplitud: </label>
+                    <input type="text" autocomplete="off" class='input' name="amplitud2" th:value="${allParams?.get('amplitud2')}" />
+                    <label>Frecuencia: </label>
+                    <input type="text" autocomplete="off" class='input' name="frecuencia2" th:value="${allParams?.get('frecuencia2')}" />
+                    <label>Fase: </label>
+                    <input type="text" autocomplete="off" class='input' name="fase2" th:value="${allParams?.get('fase2')}" />
+                </div>
+                <div class="divider div-transparent"></div>
+            </div>
+            <div class="divider div-transparent"></div>
+            <div>
+                <label>F(t)+G(t)</label>
+                <button type="submit">=</button>
+                <input type="hidden" name="resultado" th:value="${resultado}" />
+            </div>
+            <div>
+                <label th:text="${formula}"></label>
+                <label th:text="${resultado}"></label>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
