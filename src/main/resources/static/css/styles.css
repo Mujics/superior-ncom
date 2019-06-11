@@ -37,33 +37,34 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding-left: 25px;
+  margin-bottom: 20px;
 }
 
 .complejo {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
-.divider
-{
-	position: relative;
+.divider {
+	height: 1px;
 	margin: 15px 0;
-	height: 1px;
+	position: relative;
 }
 
-.div-transparent:before
-{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 5%;
-	right: 5%;
-	width: 90%;
-	height: 1px;
+.div-transparent:before {
 	background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+	content: "";
+	height: 1px;
+	left: 5%;
+	position: absolute;
+	right: 5%;
+	top: 0;
+	width: 90%;
 }
 
 .inputs {
+  margin-bottom: 20px;
   max-width: 250px;
   width: 100%;
 }
@@ -72,10 +73,14 @@ button:hover {
   width: 40px;
 }
 
-.input:focus{
+.input:focus {
   border:1px solid cyan;
   box-shadow: 0 0 10px #719ECE;
   outline: none;
+}
+
+.label {
+  margin-right: 25px;
 }
 
 .operacion {
@@ -90,11 +95,16 @@ button:hover {
   outline: none;
 }
 
+.resultado {
+  margin-bottom: 20px;
+}
+
 /* Tooltip container */
 .tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    margin-bottom: 10px;
 }
 
 /* Tooltip text */

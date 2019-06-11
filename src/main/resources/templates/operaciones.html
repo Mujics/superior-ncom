@@ -8,69 +8,77 @@
 
 <body>
     <h1>Calculadora de complejos</h1>
-    <form method="post" action="/funciones">
+    <form class="cambiar-modo" method="post" action="/funciones">
         <button type="submit">Ir a sumador de funciones trigonometricas</button>
     </form>
     <div class="contenedor">
         <form class="calculadora" method="post" action="/calcular">
-            <div class="inputs">
-                <div class="tooltip">Formato?
-                    <span class="tooltiptext">binomicos => (a,b) y polares => [a;b]</span>
-                </div>
-                <div class="complejo">
-                    <label>Z1 = </label>
-                    <input type="text" autocomplete="off" class='input' name="complejo1" th:value="${allParams?.get('complejo1')}" />
+            <div class="tooltip">Formato?
+                <span class="tooltiptext">binomicos => (a,b) y polares => [a;b]</span>
+            </div>
+            <div>
+                <div class="inputs">
+                    <div class="complejo">
+                        <label class="label">Z1 = </label>
+                        <input type="text" autocomplete="off" class='input' name="complejo1"
+                            th:value="${allParams?.get('complejo1')}" />
+                    </div>
+                    <div class="complejo">
+                        <label class="label">Z2 = </label>
+                        <input type="text" autocomplete="off" class='input' name="complejo2"
+                            th:value="${allParams?.get('complejo2')}" />
+                    </div>
                 </div>
                 <div class="divider div-transparent"></div>
-                <div class="complejo">
-                    <label>Z2 = </label>
-                    <input type="text" autocomplete="off" class='input' name="complejo2" th:value="${allParams?.get('complejo2')}" />
+                <div class="resultado">
+                    <label>Z1</label>
+                    <select class="operacion" name="operacion">
+                        <option th:selected="${'+' == allParams?.get('operacion')}" value="+">+</option>
+                        <option th:selected="${'-' == allParams?.get('operacion')}" value="-">-</option>
+                        <option th:selected="${'*' == allParams?.get('operacion')}" value="*">*</option>
+                        <option th:selected="${'/' == allParams?.get('operacion')}" value="/">/</option>
+                    </select>
+                    <label>Z2</label>
+                    <button type="submit">=</button>
+                    <label th:text="${resultado}"></label>
+                    <input type="hidden" name="resultado" th:value="${resultado}" />
                 </div>
-            </div>
-            <div class="divider div-transparent"></div>
-            <div>
-                <label>Z1</label>
-                <select class="operacion" name="operacion">
-                    <option th:selected="${'+' == allParams?.get('operacion')}" value="+">+</option>
-                    <option th:selected="${'-' == allParams?.get('operacion')}" value="-">-</option>
-                    <option th:selected="${'*' == allParams?.get('operacion')}" value="*">*</option>
-                    <option th:selected="${'/' == allParams?.get('operacion')}" value="/">/</option>
-                </select>
-                <label>Z2</label>
-                <button type="submit">=</button>
-                <label th:text="${resultado}"></label>
-                <input type="hidden" name="resultado" th:value="${resultado}" />
                 <div>
                     <button type="submit" formaction="/cambiarDeTipo">Cambiar de tipo</button>
                 </div>
             </div>
-
         </form>
     </div>
     <div class="contenedor">
         <form class="calculadora" method="post" action="/calcularEspeciales">
-            <div class="inputs">
-                <div class="complejo">
-                    <label>Z1 = </label>
-                    <input type="text" autocomplete="off" class='input' name="complejoEspecial" th:value="${allParams?.get('complejoEspecial')}" />
-                </div>
-            </div>
-            <div class="divider div-transparent"></div>
             <div>
-                <label>Z1</label>
-                <select class="operacion" name="operacionEspecial">
-                    <option th:selected="${'potencia' == allParams?.get('operacionEspecial')}" value="potencia">potencia</option>
-                    <option th:selected="${'raiz' == allParams?.get('operacionEspecial')}" value="raiz">raiz</option>
-                </select>
-                <input type="text" autocomplete="off" class='input' name="numeroEspecial" th:value="${allParams?.get('numeroEspecial')}" />
-                <button type="submit">=</button>
-                <label th:text="${resultadoEspecial}"></label>
-                <input type="hidden" name="resultadoEspecial" th:value="${resultadoEspecial}" />
-                <div>
-                    <button type="submit" formaction="/cambiarDeTipoEspecial">Cambiar de tipo</button>
+                <div class="inputs">
+                    <div class="complejo">
+                        <label class="label">Z1 = </label>
+                        <input type="text" autocomplete="off" class='input' name="complejoEspecial"
+                            th:value="${allParams?.get('complejoEspecial')}" />
+                    </div>
+                </div>
+                <div class="divider div-transparent"></div>
+                <div class="resultado">
+                    <label>Z1</label>
+                    <select class="operacion" name="operacionEspecial">
+                        <option th:selected="${'potencia' == allParams?.get('operacionEspecial')}" value="potencia">
+                            potencia
+                        </option>
+                        <option th:selected="${'raiz' == allParams?.get('operacionEspecial')}" value="raiz">raiz
+                        </option>
+                    </select>
+                    <input type="text" autocomplete="off" class='input' name="numeroEspecial"
+                        th:value="${allParams?.get('numeroEspecial')}" />
+                    <button type="submit">=</button>
+                    <label th:text="${resultadoEspecial}"></label>
+                    <input type="hidden" name="resultadoEspecial" th:value="${resultadoEspecial}" />
                 </div>
             </div>
-
+            <div>
+                <button type="submit" formaction="/cambiarDeTipoEspecial">Cambiar de tipo</button>
+            </div>
         </form>
     </div>
 </body>
