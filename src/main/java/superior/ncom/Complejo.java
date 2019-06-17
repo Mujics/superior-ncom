@@ -87,4 +87,6 @@ public abstract class Complejo {
     }
 
     public abstract Complejo transformar();
+
+    public abstract String mostrarCon2KPI(Integer iteraciones);
 }

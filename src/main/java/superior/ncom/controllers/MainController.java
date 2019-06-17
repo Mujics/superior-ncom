@@ -10,6 +10,7 @@ import superior.ncom.Complejo;
 import superior.ncom.ComplejoFactory;
 
 import java.util.Map;
+import java.util.Objects;
 
 @Controller
 @RequestMapping(value = "")
@@ -46,7 +47,12 @@ public class MainController {
         try {
             Double numero = Double.parseDouble(allParams.get("numeroEspecial"));
             complejo1.operar(numero, allParams.get("operacionEspecial"));
-            modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
+            if (!Objects.equals(allParams.get("operacionEspecial"), "raiz")) {
+                modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
+            } else {
+                modelMap.addAttribute("resultadoEspecial", complejo1.mostrarCon2KPI(Integer.parseInt(allParams.get("numeroEspecial"))));
+            }
+
             modelMap.addAttribute("resultadoEspecialCompleto", complejo1.mostrarCompleto());
         } catch (Exception e) {
             modelMap.addAttribute("resultadoEspecial", "Error");

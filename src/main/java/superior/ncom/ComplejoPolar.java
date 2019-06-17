@@ -21,6 +21,17 @@ public class ComplejoPolar extends Complejo {
        return  "[" + modulo.toString() + ";" + argumento.toString() + "]";
     }
 
+    @Override public String mostrarCon2KPI(Integer iteraciones) {
+        DecimalFormat df = new DecimalFormat("###.##");
+        StringBuilder resultado = new StringBuilder(mostrar() + ", ");
+        for (int i = 1; i < iteraciones; i++) {
+            resultado.append("[").append(df.format(modulo)).append(";")
+                    .append(df.format(argumento)).append("]");
+        }
+        return resultado.toString();
+    }
+
+
     public ComplejoBinomico transformar() {
         return ComplejoTransformer.convertirABinomico(modulo, argumento);
     }

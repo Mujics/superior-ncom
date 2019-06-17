@@ -45,6 +45,10 @@ public class NoComplejo extends Complejo {
         return this;
     }
 
+    @Override public String mostrarCon2KPI(Integer iteraciones) {
+        return "Error";
+    }
+
     @Override public String mostrar() {
         return "Error";
     }

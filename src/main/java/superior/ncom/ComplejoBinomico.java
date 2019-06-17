@@ -30,6 +30,11 @@ public class ComplejoBinomico extends Complejo {
         return ComplejoTransformer.convertirAPolar(parteReal, parteImaginaria);
     }
 
+    @Override public String mostrarCon2KPI(Integer iteraciones) {
+        ComplejoPolar complejoPolar = transformar();
+        return complejoPolar.mostrarCon2KPI(iteraciones);
+    }
+
     public void suma(ComplejoBinomico complejoBinomico){
         parteReal += complejoBinomico.parteReal;
         parteImaginaria += complejoBinomico.parteImaginaria;

@@ -2,21 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5dca90e-f259-49e6-918b-4fef21b3c766" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/Mostrable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/superior/ncom/Mostrable.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometricaFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/NoFuncionTrigonometrica.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/superior/ncom/ComplejoBinomico.class" afterPath="$PROJECT_DIR$/target/classes/superior/ncom/ComplejoBinomico.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/superior/ncom/ComplejoPolar.class" afterPath="$PROJECT_DIR$/target/classes/superior/ncom/ComplejoPolar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/superior/ncom/ComplejoTests.class" afterPath="$PROJECT_DIR$/target/test-classes/superior/ncom/ComplejoTests.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoTransformer.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometrica.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometrica.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/NoComplejo.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/NoComplejo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/FuncionesCosenoController.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/FuncionesCosenoController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/operaciones.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/operaciones.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java" afterPath="$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,23 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="operaciones.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/operaciones.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-              <folding>
-                <marker date="1560782494407" expanded="true" signature="4042:4057" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FuncionTrigonometrica.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometrica.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+            <state relative-caret-position="169">
+              <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,13 +57,13 @@
       <file leaf-file-name="NoComplejo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/NoComplejo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
+            <state relative-caret-position="253">
               <caret line="48" column="23" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
               <folding>
-                <element signature="e#781#782#0" expanded="true" />
-                <element signature="e#811#812#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,10 +72,57 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="65" column="86" lean-forward="false" selection-start-line="65" selection-start-column="86" selection-end-line="65" selection-end-column="86" />
+            <state relative-caret-position="472">
+              <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FuncionesCosenoController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/FuncionesCosenoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComplejoFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FuncionTrigonometricaFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometricaFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoFuncionTrigonometrica.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/NoFuncionTrigonometrica.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#131#132#0" expanded="true" />
+                <element signature="e#164#165#0" expanded="true" />
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#225#226#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,38 +131,18 @@
       <file leaf-file-name="ComplejoPolar.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="84" column="57" lean-forward="true" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
+            <state relative-caret-position="358">
+              <caret line="100" column="33" lean-forward="false" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComplejoTests.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java">
+      <file leaf-file-name="Complejo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2412">
-              <caret line="214" column="72" lean-forward="false" selection-start-line="214" selection-start-column="72" selection-end-line="214" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComplejoTransformer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoTransformer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Math.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.sdkman/candidates/java/8.0.181-zulu/src.zip!/java/lang/Math.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="137" column="25" lean-forward="false" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+            <state relative-caret-position="388">
+              <caret line="90" column="27" lean-forward="false" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -141,7 +152,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
               <folding>
                 <element signature="e#403#404#0" expanded="true" />
                 <element signature="e#453#454#0" expanded="true" />
@@ -203,19 +214,21 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/operacionesPolares.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/operacionesBinomicas.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/operacionesConFunciones.html" />
-        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/FuncionesCosenoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoFactory.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/styles.css" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/Mostrable.java" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometrica.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/operaciones.html" />
-        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/NoComplejo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java" />
-        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java" />
         <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoTransformer.java" />
         <option value="$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/NoComplejo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometricaFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/NoFuncionTrigonometrica.java" />
+        <option value="$PROJECT_DIR$/src/main/java/superior/ncom/controllers/FuncionesCosenoController.java" />
       </list>
     </option>
   </component>
@@ -231,6 +244,12 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="22" />
@@ -400,13 +419,13 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="superior.ncom" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="superior.ncom" />
       <recent name="superior.ncom.controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -678,7 +697,7 @@
       <workItem from="1560205076830" duration="3169000" />
       <workItem from="1560259581394" duration="124000" />
       <workItem from="1560271120533" duration="156000" />
-      <workItem from="1560780705231" duration="5153000" />
+      <workItem from="1560780705231" duration="7349000" />
     </task>
     <servers />
   </component>
@@ -715,7 +734,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46543000" />
+    <option name="totallyTimeSpent" value="48739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -728,11 +747,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7762999" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23390558" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -760,7 +779,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java</url>
-          <line>72</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
@@ -771,34 +790,26 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java</url>
           <line>102</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="55" />
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/NcomApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="45" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -948,16 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/FuncionesCosenoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -984,14 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/MostrableBinomico.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1005,47 +998,6 @@
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/operaciones.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <marker date="1560782494407" expanded="true" signature="4042:4057" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/NoComplejo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="48" column="23" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
-          <folding>
-            <element signature="e#781#782#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="65" column="86" lean-forward="false" selection-start-line="65" selection-start-column="86" selection-end-line="65" selection-end-column="86" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1065,35 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometrica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="84" column="57" lean-forward="true" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoTransformer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1104,9 +1027,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/superior/ncom/ComplejoTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2412">
+        <state relative-caret-position="-85">
           <caret line="214" column="72" lean-forward="false" selection-start-line="214" selection-start-column="72" selection-end-line="214" selection-end-column="72" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/operaciones.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+          <folding>
+            <marker date="1560782494407" expanded="true" signature="4042:4057" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/NoComplejo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="48" column="23" lean-forward="false" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/Complejo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="90" column="27" lean-forward="false" selection-start-line="90" selection-start-column="27" selection-end-line="90" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoBinomico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+          <folding>
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#453#454#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="27" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/ComplejoPolar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="100" column="33" lean-forward="false" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometricaFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/NoFuncionTrigonometrica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#164#165#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/FuncionTrigonometrica.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/superior/ncom/controllers/FuncionesCosenoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="46" lean-forward="false" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
