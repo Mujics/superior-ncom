@@ -48,4 +48,8 @@ public class NoComplejo extends Complejo {
     @Override public String mostrar() {
         return "Error";
     }
+
+    @Override public String mostrarCompleto() {
+        return "Error";
+    }
 }

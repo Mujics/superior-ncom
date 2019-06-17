@@ -17,9 +17,13 @@ public class ComplejoBinomico extends Complejo {
         parteImaginaria = -parteImaginaria;
     }
 
-    @Override public String mostrar() {
+    public String mostrar() {
         DecimalFormat df = new DecimalFormat("###.##");
-        return "(" + df.format(parteReal) + "," + df.format(Math.abs(parteImaginaria)) + ")";
+        return "(" + df.format(parteReal) + "," + df.format(parteImaginaria) + ")";
+    }
+
+    public String mostrarCompleto() {
+       return  "(" + parteReal.toString() + "," + parteImaginaria.toString() + ")";
     }
 
     public ComplejoPolar transformar() {
@@ -77,17 +81,15 @@ public class ComplejoBinomico extends Complejo {
     }
 
     public void potencia(Double potencia) {
-        ComplejoPolar thisPolar = (ComplejoPolar) this.transformar();
+        ComplejoPolar thisPolar = this.transformar();
         thisPolar.potencia(potencia);
         cloneComplejo(thisPolar);
     }
 
     public void raizNesima(Double raiz) {
-        parteReal = Math.pow(Math.E, Math.log(parteReal / raiz));
-        parteImaginaria = parteImaginaria + (2*0*Math.PI)/raiz ;
-        for(Double k=0.00; k<raiz; k++) {
-            System.out.println("las Partes imaginarias son" + (parteImaginaria + (2*k*Math.PI)/raiz));
-        }
+        ComplejoPolar thisPolar = this.transformar();
+        thisPolar.raizNesima(raiz);
+        cloneComplejo(thisPolar);
     }
 
     private void cloneComplejo(Complejo complejoPolar) {

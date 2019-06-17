@@ -41,7 +41,7 @@
                     <label>Z2</label>
                     <button type="submit">=</button>
                     <label th:text="${resultado}"></label>
-                    <input type="hidden" name="resultado" th:value="${resultado}" />
+                    <input type="hidden" name="resultado" th:value="${resultadoCompleto}" />
                 </div>
                 <div>
                     <button type="submit" formaction="/cambiarDeTipo">Cambiar de tipo</button>
@@ -73,7 +73,7 @@
                         th:value="${allParams?.get('numeroEspecial')}" />
                     <button type="submit">=</button>
                     <label th:text="${resultadoEspecial}"></label>
-                    <input type="hidden" name="resultadoEspecial" th:value="${resultadoEspecial}" />
+                    <input type="hidden" name="resultadoEspecialCompleto" th:value="${resultadoEspecial}" />
                 </div>
             </div>
             <div>

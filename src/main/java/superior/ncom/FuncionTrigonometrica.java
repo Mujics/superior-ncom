@@ -3,7 +3,7 @@ package superior.ncom;
 import java.text.DecimalFormat;
 import java.util.Objects;
 
-public class FuncionTrigonometrica implements Mostrable{
+public class FuncionTrigonometrica {
     private Double amplitud;
     private Double frecuencia;
     private Double fase;
@@ -46,7 +46,7 @@ public class FuncionTrigonometrica implements Mostrable{
         return new ComplejoPolar(amplitud, fase);
     }
 
-    @Override public String mostrar() {
+    public String mostrar() {
         return getAmplitudMostrable() + " . cos(" + getFrecuenciaMostrable() + "t " + getFaseMostrable() + ")";
     }
 

@@ -12,9 +12,13 @@ public class ComplejoPolar extends Complejo {
 		this.argumento = argumento;
     }
 
-    @Override public String mostrar() {
+    public String mostrar() {
         DecimalFormat df = new DecimalFormat("###.##");
         return "[" + df.format(modulo) + ";" + df.format(argumento) + "]";
+    }
+
+    public String mostrarCompleto() {
+       return  "[" + modulo.toString() + ";" + argumento.toString() + "]";
     }
 
     public ComplejoBinomico transformar() {
@@ -73,13 +77,12 @@ public class ComplejoPolar extends Complejo {
     }
 
     public void raizNesima(Double raiz) {
-        ComplejoBinomico complejoBinomico = this.transformar();
-        complejoBinomico.raizNesima(raiz);
-        cloneComplejo(complejoBinomico);
+        modulo = Math.pow(modulo, 1/raiz);
+        argumento = argumento/raiz;
     }
 
     private void cloneComplejo(ComplejoBinomico complejoBinomico) {
-        ComplejoPolar complejoPolar = (ComplejoPolar) complejoBinomico.transformar();
+        ComplejoPolar complejoPolar = complejoBinomico.transformar();
         this.argumento = complejoPolar.argumento;
         this.modulo = complejoPolar.modulo;
     }

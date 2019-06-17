@@ -29,8 +29,10 @@ public class MainController {
         try {
             complejo1.operar(complejo2, allParams.get("operacion"));
             modelMap.addAttribute("resultado", complejo1.mostrar());
+            modelMap.addAttribute("resultadoCompleto", complejo1.mostrarCompleto());
         } catch (Exception e) {
             modelMap.addAttribute("resultado", "Error");
+            modelMap.addAttribute("resultadoCompleto", "Error");
         }
 
         modelMap.addAttribute("allParams", allParams);
@@ -45,6 +47,7 @@ public class MainController {
             Double numero = Double.parseDouble(allParams.get("numeroEspecial"));
             complejo1.operar(numero, allParams.get("operacionEspecial"));
             modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
+            modelMap.addAttribute("resultadoEspecialCompleto", complejo1.mostrarCompleto());
         } catch (Exception e) {
             modelMap.addAttribute("resultadoEspecial", "Error");
         }
@@ -60,6 +63,7 @@ public class MainController {
 
         ModelMap modelMap = new ModelMap();
         modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
+        modelMap.addAttribute("resultadoEspecialCompleto", complejo1.mostrarCompleto());
         modelMap.addAttribute("allParams", allParams);
         return new ModelAndView("operaciones", modelMap);
     }
@@ -71,6 +75,7 @@ public class MainController {
 
         ModelMap modelMap = new ModelMap();
         modelMap.addAttribute("resultado", complejo1.mostrar());
+        modelMap.addAttribute("resultadoCompleto", complejo1.mostrarCompleto());
         modelMap.addAttribute("allParams", allParams);
         return new ModelAndView("operaciones", modelMap);
     }

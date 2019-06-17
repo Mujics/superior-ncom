@@ -7,11 +7,11 @@ public class ComplejoTransformer {
 
     private static Double calcularArgumento(Double parteReal, Double parteImaginaria) {
         Double argumento = Math.atan2(parteImaginaria,parteReal);
-        /*if (parteImaginaria < 0 && parteReal < 0) {
+        if (parteImaginaria < 0 && parteReal < 0) {
             argumento += Math.PI;
-        } else if (parteImaginaria < 0 && parteReal > 0) {
+        } else if (parteImaginaria < 0 && parteReal >= 0) {
             argumento += 2*Math.PI;
-        }*/
+        }
         return argumento;
     }
 

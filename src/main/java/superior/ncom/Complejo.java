@@ -2,7 +2,7 @@ package superior.ncom;
 
 import java.util.Objects;
 
-public abstract class Complejo implements Mostrable {
+public abstract class Complejo {
     abstract void suma(ComplejoBinomico complejo);
     abstract void suma(ComplejoPolar complejo);
     abstract void resta(ComplejoBinomico complejo);
@@ -13,6 +13,8 @@ public abstract class Complejo implements Mostrable {
     abstract void dividi(ComplejoPolar complejo);
     abstract void potencia(Double numero);
     abstract void raizNesima(Double numero);
+    public abstract String mostrar();
+    public abstract String mostrarCompleto();
 
     public void suma(Complejo complejo2) throws Exception {
         if (complejo2.getClass() == ComplejoBinomico.class) {
