@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 import superior.ncom.Complejo;
 import superior.ncom.ComplejoFactory;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -49,11 +50,12 @@ public class MainController {
             complejo1.operar(numero, allParams.get("operacionEspecial"));
             if (!Objects.equals(allParams.get("operacionEspecial"), "raiz")) {
                 modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
+                modelMap.addAttribute("resultadoEspecialCompleto", complejo1.mostrarCompleto());
             } else {
                 modelMap.addAttribute("resultadoEspecial", complejo1.mostrarCon2KPI(Integer.parseInt(allParams.get("numeroEspecial"))));
+                modelMap.addAttribute("resultadoEspecialCompleto", complejo1.mostrarCon2KPI(Integer.parseInt(allParams.get("numeroEspecial"))));
             }
 
-            modelMap.addAttribute("resultadoEspecialCompleto", complejo1.mostrarCompleto());
         } catch (Exception e) {
             modelMap.addAttribute("resultadoEspecial", "Error");
         }
@@ -64,13 +66,25 @@ public class MainController {
 
     @RequestMapping(value = "/cambiarDeTipoEspecial", method = RequestMethod.POST)
     public ModelAndView cambiarDeTipoEspecial(@RequestParam Map<String,String> allParams) {
-        Complejo complejo = ComplejoFactory.create(allParams.get("resultadoEspecial"));
-        Complejo complejo1 = complejo.transformar();
 
         ModelMap modelMap = new ModelMap();
-        modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
-        modelMap.addAttribute("resultadoEspecialCompleto", complejo1.mostrarCompleto());
-        modelMap.addAttribute("allParams", allParams);
+        if (!allParams.get("operacionEspecial").contains("raiz")) {
+            Complejo complejo = ComplejoFactory.create(allParams.get("resultadoEspecialCompleto"));
+            Complejo complejo1 = complejo.transformar();
+            modelMap.addAttribute("resultadoEspecial", complejo1.mostrar());
+            modelMap.addAttribute("resultadoEspecialCompleto", complejo1.mostrarCompleto());
+            modelMap.addAttribute("allParams", allParams);
+        } else {
+            List<Complejo> complejos = ComplejoFactory.createArray(allParams.get("resultadoEspecialCompleto"));
+            StringBuilder resultados = new StringBuilder();
+            for (Complejo complejo : complejos) {
+                resultados.append(complejo.transformar().mostrar()).append(":");
+            }
+            modelMap.addAttribute("resultadoEspecial", resultados.toString());
+            modelMap.addAttribute("resultadoEspecialCompleto", resultados.toString());
+            modelMap.addAttribute("allParams", allParams);
+        }
+
         return new ModelAndView("operaciones", modelMap);
     }
 

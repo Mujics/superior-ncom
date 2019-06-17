@@ -23,10 +23,10 @@ public class ComplejoPolar extends Complejo {
 
     @Override public String mostrarCon2KPI(Integer iteraciones) {
         DecimalFormat df = new DecimalFormat("###.##");
-        StringBuilder resultado = new StringBuilder(mostrar() + ", ");
+        StringBuilder resultado = new StringBuilder(mostrar() + ":");
         for (int i = 1; i < iteraciones; i++) {
             resultado.append("[").append(df.format(modulo)).append(";")
-                    .append(df.format(argumento)).append("]");
+                    .append(df.format(argumento+2*i*Math.PI)).append("]").append(":");
         }
         return resultado.toString();
     }
