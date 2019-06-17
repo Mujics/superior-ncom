@@ -43,7 +43,6 @@
                 </div>
                 <div class="divider div-transparent"></div>
             </div>
-            <div class="divider div-transparent"></div>
             <div>
                 <label class="m-r-10">F(t)</label>
                 <select class="operacion" name="operacion">
@@ -51,12 +50,12 @@
                     <option th:selected="${'-' == allParams?.get('operacion')}" value="-">-</option>
                 </select>
                 <label class="m-r-10">G(t)</label>
-                <button type="submit">=</button>
+                <button class="m-r-10" type="submit">=</button>
                 <input type="hidden" name="resultado" th:value="${resultado}" />
-            </div>
-            <div>
                 <label class="m-r-10" th:text="${formula}"></label>
                 <label class="m-r-10" th:text="${resultado}"></label>
+            </div>
+            <div>
             </div>
 
         </form>

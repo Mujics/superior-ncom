@@ -61,17 +61,17 @@
                 </div>
                 <div class="divider div-transparent"></div>
                 <div class="resultado">
-                    <label>Z1</label>
-                    <select class="operacion" name="operacionEspecial">
+                    <label class="m-r-10">Z1</label>
+                    <select class="operacion m-r-10" name="operacionEspecial">
                         <option th:selected="${'potencia' == allParams?.get('operacionEspecial')}" value="potencia">
                             potencia
                         </option>
                         <option th:selected="${'raiz' == allParams?.get('operacionEspecial')}" value="raiz">raiz
                         </option>
                     </select>
-                    <input type="text" autocomplete="off" class='input' name="numeroEspecial"
+                    <input type="text" autocomplete="off" class='input m-r-10' name="numeroEspecial"
                         th:value="${allParams?.get('numeroEspecial')}" />
-                    <button type="submit">=</button>
+                    <button class="m-r-10" type="submit">=</button>
                     <label th:text="${resultadoEspecial}"></label>
                     <input type="hidden" name="resultadoEspecialCompleto" th:value="${resultadoEspecialCompleto}" />
                 </div>
