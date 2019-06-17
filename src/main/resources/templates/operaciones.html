@@ -31,15 +31,15 @@
                 </div>
                 <div class="divider div-transparent"></div>
                 <div class="resultado">
-                    <label>Z1</label>
+                    <label class="m-r-15">Z1</label>
                     <select class="operacion" name="operacion">
                         <option th:selected="${'+' == allParams?.get('operacion')}" value="+">+</option>
                         <option th:selected="${'-' == allParams?.get('operacion')}" value="-">-</option>
                         <option th:selected="${'*' == allParams?.get('operacion')}" value="*">*</option>
                         <option th:selected="${'/' == allParams?.get('operacion')}" value="/">/</option>
                     </select>
-                    <label>Z2</label>
-                    <button type="submit">=</button>
+                    <label class="m-r-15">Z2</label>
+                    <button class="m-r-15"type="submit">=</button>
                     <label th:text="${resultado}"></label>
                     <input type="hidden" name="resultado" th:value="${resultadoCompleto}" />
                 </div>
